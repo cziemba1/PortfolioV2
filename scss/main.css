@@ -1,0 +1,116 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, small, strike, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
+  vertical-align: baseline;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Tomorrow', sans-serif;
+  background-color: var(--blue-main);
+  --blue-main: #100b22;
+  --orange-main: #e0551f;
+  --orange-rgba: rgba(224, 85, 31, 0.5);
+  --glitch: #00ffff;
+}
+
+#main-body {
+  overflow: hidden;
+}
+
+#main-body .burger-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#main-body .burger-menu ul li {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+  font-weight: bold;
+}
+
+#main-body .burger-menu ul li .nav-link {
+  color: var(--blue-main);
+  position: relative;
+}
+
+#main-body .burger-menu ul li .nav-link:hover {
+  color: var(--orange-main);
+}
+
+#main-body .burger-menu ul li .nav-link::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(380%);
+          transform: translateY(380%);
+  width: 0;
+  left: 0;
+  height: .3rem;
+  background: currentColor;
+  -webkit-transition: width 0.3s ease-in;
+  transition: width 0.3s ease-in;
+}
+
+#main-body .burger-menu ul li .nav-link:hover::after {
+  width: 100%;
+}
+
+#main-body .burger-menu #close {
+  position: absolute;
+  font-size: 2rem;
+  cursor: pointer;
+  -webkit-transform: translate(14rem, -20rem);
+          transform: translate(14rem, -20rem);
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+#main-body .burger-menu #close:hover {
+  color: var(--orange-main);
+}
+
+#main-body .burger-active {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#main-body #hero {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  border: 0.05rem solid var(--orange-rgba);
+  margin: 1rem;
+  height: 95%;
+  width: 93%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#main-body #hero a {
+  font-size: 3.5rem;
+  font-weight: bolder;
+  color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+#main-body #hero p {
+  font-size: 1.5rem;
+  color: var(--orange-main);
+  padding: 0 1rem 1rem 1rem;
+}
+/*# sourceMappingURL=main.css.map */

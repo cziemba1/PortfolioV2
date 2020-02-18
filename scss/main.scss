@@ -1,0 +1,102 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, small, strike, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    vertical-align: baseline;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Tomorrow', sans-serif;
+    background-color: var(--blue-main);
+    --blue-main: #100b22;
+    --orange-main: #e0551f;
+    --orange-rgba: rgba(224, 85, 31, 0.5);
+    --glitch: #00ffff;
+}
+
+#main-body{
+    overflow: hidden;
+
+    .burger-menu{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        ul li{
+            font-size: 2rem;
+            margin-bottom: .5rem;
+            font-weight: bold;
+
+            .nav-link{
+                color: var(--blue-main);
+                position: relative;
+
+                &:hover{
+                    color: var(--orange-main);
+                }
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top:50%;
+                    transform:translateY(380%);
+                    width: 0;
+                    left: 0;
+                    height: .3rem;
+                    background: currentColor;
+                    transition: width 0.3s ease-in;
+                }
+
+                &:hover::after{
+                    width: 100%;
+                }
+            }
+        }
+
+        #close{
+            position: absolute;
+            font-size: 2rem;
+            cursor: pointer;
+            transform: translate(14rem, -20rem);
+            transition: color 0.2s ease-in;
+
+            &:hover{
+                color: var(--orange-main);
+            }
+        }
+    }
+
+    .burger-active{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #hero{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        border: .05rem solid var(--orange-rgba);
+        margin: 1rem;
+        height: 95%;
+        width: 93%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        a{
+            font-size: 3.5rem;
+            font-weight: bolder;
+            color: white;
+            padding: 1rem;
+            position: relative;
+        }
+        
+        p{
+            font-size: 1.5rem;
+            color: var(--orange-main);
+            padding: 0 1rem 1rem 1rem;
+        }
+    }
+}
