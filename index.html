@@ -13,24 +13,31 @@
 <body>
 
     <div id="main-body">
-        <div class="burger-menu  burger-active">
-            <ul>
-                <li><a class="nav-link active" href="index.html">HOME</a></li>
-                <li><a class="nav-link" href="projects.html">PROJECTS</a></li>
-                <li><a class="nav-link" href="about.html">ABOUT</a></li>
-                <li><a class="nav-link" href="contact.html">CONTACT</a></li>
-            </ul>
-            <a class="nav-link" id="close">X</a>
-        </div>
-
         <div id="hero">
-            <a href="about.html">CLAUDIA <br> ZIEMBA</a>
-            <p>FRONT-END DEVELOPER</p>
-
+            <div class="burger-menu ">
+                <ul>
+                    <li><a class="nav-link active" href="index.html">HOME</a></li>
+                    <li><a class="nav-link" href="projects.html">PROJECTS</a></li>
+                    <li><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li><a class="nav-link" href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="burger-menu-icon burger-menu-icon-closed">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <a class="claudia" data-glitch="CLAUDIA" href="about.html">CLAUDIA</a>
+            <a class="ziemba" data-glitch01="ZIEMBA" href="about.html">ZIEMBA</a>
+            <div class="more-info">
+                <p>- FRONT-END DEVELOPER -</p>
+            </div>
 
         </div>
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
 

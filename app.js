@@ -1,7 +1,9 @@
-const burgerClose = document.querySelector("#close");
+$('.burger-menu-icon').on('click', function () {
+    $(this).toggleClass("burger-menu-icon-opened");
+    $(this).toggleClass("burger-menu-icon-closed");
+});
 
-burgerClose.addEventListener("click", closeBurger);
+$('.burger-menu-icon').on('click', function () {
+    $(".burger-menu").toggleClass("burger-active");
+});
 
-let closeBurger = function () {
-    burgerClose.classList.remove("burger-menu")
-}

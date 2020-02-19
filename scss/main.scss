@@ -28,6 +28,8 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             font-size: 2rem;
             margin-bottom: .5rem;
             font-weight: bold;
+            opacity: 0;
+            visibility: hidden;
 
             .nav-link{
                 color: var(--blue-main);
@@ -52,26 +54,19 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
                 &:hover::after{
                     width: 100%;
                 }
-            }
+            }        
         }
-
-        #close{
-            position: absolute;
-            font-size: 2rem;
-            cursor: pointer;
-            transform: translate(14rem, -20rem);
-            transition: color 0.2s ease-in;
-
-            &:hover{
-                color: var(--orange-main);
-            }
-        }
+    & ul li .active{
+        opacity: 1;
+        visibility: visible;
     }
 
-    .burger-active{
-        visibility: hidden;
-        opacity: 0;
+        
     }
+
+    
+
+    
 
     #hero{
         width: 100%;
@@ -80,23 +75,186 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         border: .05rem solid var(--orange-rgba);
         margin: 1rem;
         height: 95%;
-        width: 93%;
+        width: 91%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
 
-        a{
+        .claudia{
             font-size: 3.5rem;
             font-weight: bolder;
             color: white;
-            padding: 1rem;
+            padding: .2rem 1rem .5rem 1rem;
             position: relative;
+
+    
+            &::before, 
+            &::after{
+                padding: .2rem 1rem .5rem 1rem;
+                color: white;
+                content: attr(data-glitch);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: var(--blue-main);
+                overflow: hidden;
+                top: 0;
+            }
+
+            &::before{
+                left: 3px;
+                text-shadow: -2px 0 var(--orange-main);
+                animation-name: glitch-animation-1;
+                animation-duration: 6s;
+                animation-timing-function: linear;
+                animation-delay: 4s;
+                animation-iteration-count: infinite;
+                animation-direction: reverse-alternate;
+            }
+
+            &::after{
+                left: -3px;
+                text-shadow: -2px 0 var(--glitch);
+                animation-name: glitch-animation-2;
+                animation-duration: 6s;
+                animation-timing-function: linear;
+                animation-delay: 4s;
+                animation-iteration-count: infinite;
+                animation-direction: reverse-alternate;
+            }
         }
-        
-        p{
-            font-size: 1.5rem;
+        .ziemba{
+            font-size: 3.5rem;
+            font-weight: bolder;
+            color: white;
+            padding: .2rem 1rem .5rem 1rem;
+            position: relative;
+
+    
+            &::before, 
+            &::after{
+                padding: .2rem 1rem .5rem 1rem;;
+                color: white;
+                content: attr(data-glitch01);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: var(--blue-main);
+                overflow: hidden;
+                top: 0;
+            }
+
+            &::before{
+                left: 3px;
+                text-shadow: -2px 0 var(--glitch);
+                animation-name: glitch-animation-1;
+                animation-duration: 5s;
+                animation-timing-function: linear;
+                animation-delay: 4s;
+                animation-iteration-count: infinite;
+                animation-direction: reverse-alternate;
+            }
+
+            &::after{
+                left: -3px;
+                text-shadow: -2px 0 var(--orange-main);
+                animation-name: glitch-animation-2;
+                animation-duration: 5s;
+                animation-timing-function: linear;
+                animation-delay: 4s;
+                animation-iteration-count: infinite;
+                animation-direction: reverse-alternate;
+            }
+        }
+
+        .more-info{
+            margin-top: 1rem;
+
+            p{
+            font-size: .9rem;
             color: var(--orange-main);
             padding: 0 1rem 1rem 1rem;
+            }
+        }
+    }
+}
+
+.burger-menu-icon{
+    margin: 18rem 1rem;
+    width: 40px;
+    display: block;
+    transition: all .3s;
+    cursor: pointer;
+    height: 40px;
+    
+    .bar{
+        transition: all .3s;
+        height: 4px;
+        width: 100%;
+        display: block;
+        background-color: white;
+    }
+      
+    .bar:nth-of-type(2){
+        margin: 8px 0;
+    }
+    &-closed{
+        transition-delay: .3s;
+
+        .bar{
+            float: left;
+        }
+        .bar:nth-of-type(2){
+            width: 75%;     
+            transition-property: margin, height, width;
+            transition-delay: .3s, .3s, 0s;
+        }
+        .bar:nth-of-type(3){
+            width: 50%;
+        }          
+        &:hover{
+            .bar:nth-of-type(2){
+                width: 100%;
+            }
+            .bar:nth-of-type(3){
+                width: 100%;
+            }
+        }
+    }
+    &-opened{
+        padding-top: 12px;
+        
+        .bar:nth-of-type(1){
+            transform: rotate(45deg);
+            transition-delay: .3s;
+            height: 2px;
+        }
+        .bar:nth-of-type(2){
+            opacity: 0;
+            height: 0;
+            margin: -3px;
+        }
+        .bar:nth-of-type(3){
+            transform: rotate(-45deg);
+            transition-delay: .3s;
+            height: 2px;
+        }
+    }   
+}
+@keyframes glitch-animation-1{
+        $steps: 8;
+        @for $i from 0 through $steps{
+            #{percentage($i*(1/$steps))}{
+            clip: rect(random(150)+px, 350px, random(90)+px, 30px)
+        }
+    }
+}
+
+@keyframes glitch-animation-2{
+        $steps: 8;
+        @for $i from 0 through $steps{
+            #{percentage($i*(1/$steps))} {
+            clip: rect(random(150)+px, 350px, random(90)+px, 30px)
         }
     }
 }
