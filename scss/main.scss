@@ -17,57 +17,6 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
 
 #main-body{
     overflow: hidden;
-
-    .burger-menu{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        ul li{
-            font-size: 2rem;
-            margin-bottom: .5rem;
-            font-weight: bold;
-            opacity: 0;
-            visibility: hidden;
-
-            .nav-link{
-                color: var(--blue-main);
-                position: relative;
-
-                &:hover{
-                    color: var(--orange-main);
-                }
-
-                &::after{
-                    content: '';
-                    position: absolute;
-                    top:50%;
-                    transform:translateY(380%);
-                    width: 0;
-                    left: 0;
-                    height: .3rem;
-                    background: currentColor;
-                    transition: width 0.3s ease-in;
-                }
-
-                &:hover::after{
-                    width: 100%;
-                }
-            }        
-        }
-    & ul li .active{
-        opacity: 1;
-        visibility: visible;
-    }
-
-        
-    }
-
-    
-
-    
-
     #hero{
         width: 100%;
         height: 100vh;
@@ -94,8 +43,8 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
                 color: white;
                 content: attr(data-glitch);
                 position: absolute;
-                width: 100%;
-                height: 100%;
+                width: 90%;
+                height: 90%;
                 background: var(--blue-main);
                 overflow: hidden;
                 top: 0;
@@ -137,8 +86,8 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
                 color: white;
                 content: attr(data-glitch01);
                 position: absolute;
-                width: 100%;
-                height: 100%;
+                width: 90%;
+                height: 90%;
                 background: var(--blue-main);
                 overflow: hidden;
                 top: 0;
@@ -168,7 +117,6 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         }
 
         .more-info{
-            margin-top: 1rem;
 
             p{
             font-size: .9rem;
@@ -176,71 +124,80 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             padding: 0 1rem 1rem 1rem;
             }
         }
-    }
-}
-
-.burger-menu-icon{
-    margin: 18rem 1rem;
-    width: 40px;
-    display: block;
-    transition: all .3s;
-    cursor: pointer;
-    height: 40px;
-    
-    .bar{
-        transition: all .3s;
-        height: 4px;
-        width: 100%;
-        display: block;
-        background-color: white;
-    }
-      
-    .bar:nth-of-type(2){
-        margin: 8px 0;
-    }
-    &-closed{
-        transition-delay: .3s;
-
-        .bar{
-            float: left;
-        }
-        .bar:nth-of-type(2){
-            width: 75%;     
-            transition-property: margin, height, width;
-            transition-delay: .3s, .3s, 0s;
-        }
-        .bar:nth-of-type(3){
-            width: 50%;
-        }          
-        &:hover{
-            .bar:nth-of-type(2){
-                width: 100%;
+        .toggle-btn {
+            position: fixed;
+            margin: 1rem;
+            width: 40px;
+            height: 12px;
+            z-index: 3;
+            transform: translateY(-33rem);
+            
+            span.one {
+                position: absolute;
+                width: 40px;
+                height: 2px;
+                background: #fff;
             }
-            .bar:nth-of-type(3){
-                width: 100%;
+
+            span.two {
+                position: absolute;
+                width: 40px;
+                height: 2px;
+                background: #fff;
+                margin-top: 12px;
             }
         }
+        .menu {
+            z-index: 2;
+            position: absolute;
+            background: var(--blue-main);
+            height: 100vh;
+            width: 100%;
+            top: -100%;
+            overflow: hidden;
+
+            .data {
+                padding: 11rem 0 0 5rem;
+                text-align: left;
+
+
+                ul li{
+                    font-size: 2rem;
+                    margin-bottom: 1.5rem;
+                    font-weight: bold;
+                    position: relative;
+                    transform: translateY(7rem);
+
+                    a{
+                        color: white;
+                        position: relative;
+
+                        &:hover{
+                            color: var(--orange-main);
+                        }
+
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top:50%;
+                            transform:translateY(380%);
+                            width: 0;
+                            left: 0;
+                            height: .3rem;
+                            background: currentColor;
+                            transition: width 0.3s ease-in;
+                        }
+
+                        &:hover::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
     }
-    &-opened{
-        padding-top: 12px;
-        
-        .bar:nth-of-type(1){
-            transform: rotate(45deg);
-            transition-delay: .3s;
-            height: 2px;
-        }
-        .bar:nth-of-type(2){
-            opacity: 0;
-            height: 0;
-            margin: -3px;
-        }
-        .bar:nth-of-type(3){
-            transform: rotate(-45deg);
-            transition-delay: .3s;
-            height: 2px;
-        }
-    }   
-}
+}          
+
 @keyframes glitch-animation-1{
         $steps: 8;
         @for $i from 0 through $steps{
