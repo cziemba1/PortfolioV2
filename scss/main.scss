@@ -17,6 +17,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
 
 #main-body{
     overflow: hidden;
+
     #hero{
         width: 100%;
         height: 100vh;
@@ -24,22 +25,23 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         border: .05rem solid var(--orange-rgba);
         margin: 1rem;
         height: 95%;
-        width: 91%;
+        width: 94%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        overflow: hidden;
 
         .claudia{
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: bolder;
             color: white;
-            padding: .2rem 1rem .5rem 1rem;
+            padding: .2rem 1rem 0 1.9rem;
             position: relative;
 
     
             &::before, 
             &::after{
-                padding: .2rem 1rem .5rem 1rem;
+                padding: .2rem 1rem 0 1.9rem;
                 color: white;
                 content: attr(data-glitch);
                 position: absolute;
@@ -73,16 +75,16 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             }
         }
         .ziemba{
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: bolder;
             color: white;
-            padding: .2rem 1rem .5rem 1rem;
+            padding: .2rem 1rem 0 1.9rem;
             position: relative;
 
     
             &::before, 
             &::after{
-                padding: .2rem 1rem .5rem 1rem;;
+                padding: .2rem 1rem 0 1.9rem;
                 color: white;
                 content: attr(data-glitch01);
                 position: absolute;
@@ -119,10 +121,23 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         .more-info{
 
             p{
-            font-size: .9rem;
-            color: var(--orange-main);
-            padding: 0 1rem 1rem 1rem;
+                font-size: .9rem;
+                color: var(--orange-main);
+                padding: .5rem 1rem 1rem 2rem;
+
+                .text-problems{
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                .dash-white{
+                    color: white;
+                }
             }
+        }
+
+        .menu-fixed{
+            visibility: hidden;
+            opacity: 0;
         }
         .toggle-btn {
             position: fixed;
@@ -131,17 +146,18 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             height: 12px;
             z-index: 3;
             transform: translateY(-33rem);
+            cursor: pointer;
             
             span.one {
                 position: absolute;
-                width: 40px;
+                width: 33px;
                 height: 2px;
                 background: #fff;
             }
 
             span.two {
                 position: absolute;
-                width: 40px;
+                width: 33px;
                 height: 2px;
                 background: #fff;
                 margin-top: 12px;
@@ -195,6 +211,67 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
                 }
             }
         }
+
+        .info-about-me{
+            padding: 1rem;
+            p{
+                color: white;
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+
+                .orange-strong-color{
+                    color: var(--orange-main);
+                }
+            }
+            .work-together-contact{
+                margin-top: 3rem;
+                font-size: 1.6rem;
+
+                a{
+                    color: hsl(0, 0%, 38%);
+                    transition: color .3s ease-in;
+
+                    &:visited{
+                        color: hsl(0, 0%, 38%);
+                    }
+
+                    &:hover{
+                        color: var(--orange-main);
+                    }
+                }
+            }
+        }
+        .social-media-contact{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+
+            li a{
+                color: white;
+                position: relative;
+
+                &:hover{
+                    color: var(--orange-main);
+                }
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top:50%;
+                    transform:translateY(380%);
+                    width: 0;
+                    left: 0;
+                    height: .3rem;
+                    background: currentColor;
+                    transition: width 0.3s ease-in;
+                }
+
+                &:hover::after{
+                    width: 100%;
+                }
+            }
+        }
     }
 }          
 
@@ -212,6 +289,229 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         @for $i from 0 through $steps{
             #{percentage($i*(1/$steps))} {
             clip: rect(random(150)+px, 350px, random(90)+px, 30px)
+        }
+    }
+}
+
+@media screen and (min-width: 770px){
+    #main-body{
+
+        #hero{
+            margin: 2rem;
+            height: 90%;
+            width: 91%;
+
+            .claudia{
+                font-size: 6rem;
+                font-weight: bolder;
+                color: white;
+                padding: .2rem 1rem 0 3rem;
+                position: relative;
+
+        
+                &::before, 
+                &::after{
+                    padding: .2rem 1rem 0 3rem;
+                    position: absolute;
+                    width: 100% !important;
+                    height: 90%;
+
+                }
+
+            }
+            .ziemba{
+                font-size: 6rem;
+                padding: .2rem 1rem 0 3rem;
+                position: relative;
+
+        
+                &::before, 
+                &::after{
+                    padding: .2rem 1rem 0 3rem;
+                    width: 90%;
+                    height: 90%;
+                }
+            }
+
+            .more-info{
+
+                p{
+                    font-size: 1.3rem;
+                    padding: .5rem 1rem 5rem 3rem;
+                    
+                    .text-problems{
+                        opacity: 1;
+                        visibility: visible;
+                        font-size: .6rem;
+                    }
+                }
+            }
+            .toggle-btn {
+                display: none;  
+            }
+
+            .menu-fixed{
+                visibility: visible;
+                opacity: 1;
+                display: flex;
+                position: absolute;
+                transform: translateY(-30rem);
+                margin-left: 3rem;
+
+                li{
+                    font-size: 1rem;
+                    margin: 1rem;
+                    font-weight: lighter;
+
+                    .active{
+                            color: var(--orange-main);
+                        }
+
+                    a{
+                        color: white;
+                        position: relative;
+
+                        &:hover{
+                            color: var(--orange-main);
+                        }
+
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top:50%;
+                            transform:translateY(380%);
+                            width: 0;
+                            left: 0;
+                            height: .3rem;
+                            background: currentColor;
+                            transition: width 0.3s ease-in;
+                        }
+
+                        &:hover::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .menu {
+                display: none;   
+            }
+
+            .info-about-me{
+            padding: 1.5rem 1rem 1rem 4rem;
+            p{
+                font-size: 1.6rem;
+                line-height: 1.7rem;
+
+            }
+            .work-together-contact{
+                margin-top: 2rem;
+                font-size: 2.2rem;
+            }
+        }
+        }
+    }
+
+
+    @keyframes glitch-animation-1{
+            $steps: 8;
+            @for $i from 0 through $steps{
+                #{percentage($i*(1/$steps))}{
+                clip: rect(random(150)+px, 500px, random(90)+px, 30px)
+            }
+        }
+    }
+
+    @keyframes glitch-animation-2{
+            $steps: 8;
+            @for $i from 0 through $steps{
+                #{percentage($i*(1/$steps))} {
+                clip: rect(random(150)+px, 500px, random(90)+px, 30px)
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1020px){
+    #main-body{
+
+        #hero{
+            width: 95%;
+
+            .claudia{
+                font-size: 9rem;
+                padding: .2rem 1rem 0 5rem;
+
+        
+                &::before, 
+                &::after{
+                    padding: .2rem 1rem 0 5rem;
+                }
+
+            }
+            .ziemba{
+                font-size: 9rem;
+                padding: 0 1rem 0 5rem;
+        
+                &::before, 
+                &::after{
+                    padding: 0 1rem 0 5rem;
+                }
+            }
+
+            .more-info{
+
+                p{
+                    font-size: 1.5rem;
+                    padding: .5rem 1rem 3rem 5rem;
+                    
+                    .text-problems{
+                        opacity: 1;
+                        visibility: visible;
+                        font-size: .9rem;
+                    }
+                }
+            }
+            .toggle-btn {
+                display: none;  
+            }
+
+            .menu-fixed{
+                transform: translateY(-35rem);
+                margin-left: 5rem;
+            }
+            .info-about-me{
+            padding: 1.5rem 1rem 1rem 6rem;
+
+            p{
+                font-size: 1.9rem;
+                line-height: 2rem;
+
+            }
+            .work-together-contact{
+                margin-top: 2rem;
+                font-size: 2.9rem;
+            }
+        }
+        }
+    }
+
+
+    @keyframes glitch-animation-1{
+            $steps: 10;
+            @for $i from 0 through $steps{
+                #{percentage($i*(1/$steps))}{
+                clip: rect(random(100)+px, 800px, random(140)+px, 30px)
+            }
+        }
+    }
+
+    @keyframes glitch-animation-2{
+            $steps: 10;
+            @for $i from 0 through $steps{
+                #{percentage($i*(1/$steps))} {
+                clip: rect(random(100)+px, 800px, random(140)+px, 30px)
+            }
         }
     }
 }
