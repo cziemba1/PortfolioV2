@@ -7,7 +7,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: 'Tomorrow', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--blue-main);
     --blue-main: #100b22;
     --orange-main: #e0551f;
@@ -213,18 +213,24 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         }
 
         .info-about-me{
-            padding: 1rem;
+            padding: 1.5rem;
             p{
                 color: white;
-                font-size: 1.2rem;
-                line-height: 1.5rem;
+                font-size: 1.7rem;
+                line-height: 2rem;
+                padding-bottom: 1.6rem;
 
                 .orange-strong-color{
                     color: var(--orange-main);
                 }
             }
+            .second-paragraph-about{
+                font-size: 1rem;
+                line-height: 1.2rem;
+                padding-bottom: 0;
+            }
             .work-together-contact{
-                margin-top: 3rem;
+                margin-top: 1rem;
                 font-size: 1.6rem;
 
                 a{
@@ -243,16 +249,20 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         }
         .social-media-contact{
             display: flex;
-            justify-content: space-evenly;
-            margin-top: 3rem;
-            margin-bottom: 1rem;
+            justify-content: flex-start;
+            margin-top: .2rem;
+            margin-bottom: 2rem;
+            margin-left: 4rem;
 
             li a{
                 color: white;
                 position: relative;
+                margin-right: 2rem;
+                color: var(--orange-main);
+                transition: color 0.3s ease-in;
 
                 &:hover{
-                    color: var(--orange-main);
+                    color: white;
                 }
 
                 &::after{
@@ -399,16 +409,22 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
 
             .info-about-me{
             padding: 1.5rem 1rem 1rem 4rem;
-            p{
-                font-size: 1.6rem;
-                line-height: 1.7rem;
 
+                p{
+                    font-size: 1.7rem;
+                    line-height: 2rem;
+                    padding-bottom: 2.4rem;
+                }
+                .second-paragraph-about{
+                    font-size: .8rem;
+                    line-height: 1.4rem;
+                    padding-bottom: 0;
+                }
+                .work-together-contact{
+                    margin-top: 2rem;
+                    font-size: 2.3rem;
+                }
             }
-            .work-together-contact{
-                margin-top: 2rem;
-                font-size: 2.2rem;
-            }
-        }
         }
     }
 
@@ -481,15 +497,16 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
                 margin-left: 5rem;
             }
             .info-about-me{
-            padding: 1.5rem 1rem 1rem 6rem;
 
             p{
-                font-size: 1.9rem;
-                line-height: 2rem;
-
+                font-size: 2.3rem;
+                line-height: 2.8rem;
+            }
+            .second-paragraph-about{
+                font-size: 1rem;
+                line-height: 1.4rem;
             }
             .work-together-contact{
-                margin-top: 2rem;
                 font-size: 2.9rem;
             }
         }
