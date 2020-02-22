@@ -2,17 +2,29 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: 'Montserrat', sans-serif;
     vertical-align: baseline;
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Monument;
     background-color: var(--blue-main);
     --blue-main: #100b22;
-    --orange-main: #e0551f;
+    --orange-main: rgb(224, 85, 31);
     --orange-rgba: rgba(224, 85, 31, 0.5);
     --glitch: #00ffff;
+}
+
+
+@font-face{
+    font-family: Monument;
+    src: local("Monument"), url("/assets/font/monumentextended-ultrabold-webfont.woff2") format("woff2"), url("/assets/font/monumentextended-ultrabold-webfont.woff") format("woff");
+    font-weight:800;
+}
+    
+@font-face{
+    font-family: Monument;
+    src:local("Monument"), url("/assets/font/monumentextended-regular-webfont.woff2") format("woff2"), url("/assets/font/monumentextended-regular-webfont.woff") format("woff");
+    font-weight:normal;
 }
 
 #main-body{
@@ -31,11 +43,19 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         justify-content: flex-end;
         overflow: hidden;
 
+        p{
+            font-size: 3rem;
+            color: white;
+            position: absolute;
+            transform: translate(2rem, -18rem);
+            line-height: 1.3;
+        }
+
         .claudia{
-            font-size: 4rem;
-            font-weight: bolder;
+            font-size: 3rem;
             color: white;
             padding: .2rem 1rem 0 1.9rem;
+            margin-bottom: 14rem;
             position: relative;
 
     
@@ -74,64 +94,21 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
                 animation-direction: reverse-alternate;
             }
         }
-        .ziemba{
-            font-size: 4rem;
-            font-weight: bolder;
-            color: white;
-            padding: .2rem 1rem 0 1.9rem;
-            position: relative;
-
-    
-            &::before, 
-            &::after{
-                padding: .2rem 1rem 0 1.9rem;
-                color: white;
-                content: attr(data-glitch01);
-                position: absolute;
-                width: 90%;
-                height: 90%;
-                background: var(--blue-main);
-                overflow: hidden;
-                top: 0;
-            }
-
-            &::before{
-                left: 3px;
-                text-shadow: -2px 0 var(--glitch);
-                animation-name: glitch-animation-1;
-                animation-duration: 5s;
-                animation-timing-function: linear;
-                animation-delay: 4s;
-                animation-iteration-count: infinite;
-                animation-direction: reverse-alternate;
-            }
-
-            &::after{
-                left: -3px;
-                text-shadow: -2px 0 var(--orange-main);
-                animation-name: glitch-animation-2;
-                animation-duration: 5s;
-                animation-timing-function: linear;
-                animation-delay: 4s;
-                animation-iteration-count: infinite;
-                animation-direction: reverse-alternate;
-            }
-        }
-
+        
         .more-info{
-
+            .fa-arrow-right{
+                color: white;
+                position: absolute;
+                transform: rotate(30deg);
+                font-size: 4rem;
+                left: 6rem;
+                bottom: 9rem;
+            }
             p{
-                font-size: .9rem;
+                font-size: .8rem;
                 color: var(--orange-main);
-                padding: .5rem 1rem 1rem 2rem;
-
-                .text-problems{
-                    opacity: 0;
-                    visibility: hidden;
-                }
-                .dash-white{
-                    color: white;
-                }
+                padding: 0;
+                margin: 5.6rem 0 0 8.5rem;
             }
         }
 
@@ -145,7 +122,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             width: 40px;
             height: 12px;
             z-index: 3;
-            transform: translateY(-33rem);
+            transform: translate(15rem, -35rem);
             cursor: pointer;
             
             span.one {
@@ -213,29 +190,31 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         }
 
         .info-about-me{
-            padding: 1.5rem;
+            padding: 1%;
+            
             p{
                 color: white;
-                font-size: 1.7rem;
-                line-height: 2rem;
-                padding-bottom: 1.6rem;
+                font-size: 1rem;
+                line-height: 1.5;
+                margin-top: -5rem;
+                width: 80%;
+                font-family: 'Poppins';
 
                 .orange-strong-color{
                     color: var(--orange-main);
+                    font-family: 'Poppins';
                 }
             }
-            .second-paragraph-about{
-                font-size: 1rem;
-                line-height: 1.2rem;
-                padding-bottom: 0;
-            }
+
             .work-together-contact{
-                margin-top: 1rem;
-                font-size: 1.6rem;
+                margin-top: 14rem;
+                font-size: 1rem;
+                font-family: 'Poppins';
 
                 a{
                     color: hsl(0, 0%, 38%);
                     transition: color .3s ease-in;
+                    font-size: 1.3rem;
 
                     &:visited{
                         color: hsl(0, 0%, 38%);
@@ -249,10 +228,10 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         }
         .social-media-contact{
             display: flex;
-            justify-content: flex-start;
-            margin-top: .2rem;
+            justify-content: center;
+            margin-top: .5rem;
             margin-bottom: 2rem;
-            margin-left: 4rem;
+            margin-left: 2rem;
 
             li a{
                 color: white;
@@ -283,7 +262,8 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             }
         }
     }
-}          
+} 
+
 
 @keyframes glitch-animation-1{
         $steps: 8;
@@ -311,51 +291,31 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             height: 90%;
             width: 91%;
 
-            .claudia{
-                font-size: 6rem;
-                font-weight: bolder;
-                color: white;
-                padding: .2rem 1rem 0 3rem;
-                position: relative;
+            p{
+            font-size: 6rem;
+            transform: translate(2rem, -18rem);
+            line-height: 1.3;
+        }
 
+        .claudia{
+            font-size: 6rem;
+            padding: .2rem 1rem 0 1.9rem;
+            margin-bottom: 10rem;
+
+        }
         
-                &::before, 
-                &::after{
-                    padding: .2rem 1rem 0 3rem;
-                    position: absolute;
-                    width: 100% !important;
-                    height: 90%;
-
-                }
-
-            }
-            .ziemba{
+        .more-info{
+            .fa-arrow-right{
                 font-size: 6rem;
-                padding: .2rem 1rem 0 3rem;
-                position: relative;
-
-        
-                &::before, 
-                &::after{
-                    padding: .2rem 1rem 0 3rem;
-                    width: 90%;
-                    height: 90%;
-                }
+                left: 9rem;
+                bottom: 5rem;
             }
-
-            .more-info{
-
-                p{
-                    font-size: 1.3rem;
-                    padding: .5rem 1rem 5rem 3rem;
-                    
-                    .text-problems{
-                        opacity: 1;
-                        visibility: visible;
-                        font-size: .6rem;
-                    }
-                }
+            p{
+                font-size: 1.3rem;
+                margin: 7.5rem 0 0 14rem;
+                letter-spacing: .2rem;
             }
+        }
             .toggle-btn {
                 display: none;  
             }
@@ -365,8 +325,8 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
                 opacity: 1;
                 display: flex;
                 position: absolute;
-                transform: translateY(-30rem);
-                margin-left: 3rem;
+                transform: translateY(-37rem);
+                margin-left: 1rem;
 
                 li{
                     font-size: 1rem;
@@ -408,21 +368,24 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             }
 
             .info-about-me{
-            padding: 1.5rem 1rem 1rem 4rem;
+            padding: 5%;
 
                 p{
-                    font-size: 1.7rem;
-                    line-height: 2rem;
-                    padding-bottom: 2.4rem;
-                }
-                .second-paragraph-about{
-                    font-size: .8rem;
-                    line-height: 1.4rem;
-                    padding-bottom: 0;
+                    color: white;
+                    font-size: 1.6rem;
+                    line-height: 1.2;
+                    margin-top: -5rem;
+                    width: 80%;
+                    font-family: 'Poppins';
                 }
                 .work-together-contact{
-                    margin-top: 2rem;
-                    font-size: 2.3rem;
+                    margin-top: 15rem;
+                    font-size: 1.6rem;
+                    font-family: 'Poppins';
+
+                    a{
+                        font-size: 2rem;
+                    }
                 }
             }
         }
@@ -454,53 +417,122 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         #hero{
             width: 95%;
 
-            .claudia{
-                font-size: 9rem;
-                padding: .2rem 1rem 0 5rem;
+            p{
+            font-size: 7rem;
+            transform: translate(2rem, -18rem);
+            letter-spacing: .4rem;
+        }
 
+        .claudia{
+            font-size: 7rem;
+            padding: .2rem 1rem 0 1.9rem;
+            margin-bottom: 9rem;
+            letter-spacing: .4rem;
+        }
         
-                &::before, 
-                &::after{
-                    padding: .2rem 1rem 0 5rem;
-                }
-
+        .more-info{
+            .fa-arrow-right{
+                font-size: 6rem;
+                left: 16rem;
+                bottom: 4rem;
             }
-            .ziemba{
-                font-size: 9rem;
-                padding: 0 1rem 0 5rem;
-        
-                &::before, 
-                &::after{
-                    padding: 0 1rem 0 5rem;
-                }
+            p{
+                font-size: 1.3rem;
+                margin: 8.5rem 0 0 22rem;
+                letter-spacing: .3rem;
             }
-
-            .more-info{
-
-                p{
-                    font-size: 1.5rem;
-                    padding: .5rem 1rem 3rem 5rem;
-                    
-                    .text-problems{
-                        opacity: 1;
-                        visibility: visible;
-                        font-size: .9rem;
-                    }
-                }
-            }
-            .toggle-btn {
-                display: none;  
-            }
+        }
 
             .menu-fixed{
                 transform: translateY(-35rem);
-                margin-left: 5rem;
+                margin-left: 30%;
+
+                li{
+                    font-size: 1.5rem;
+                }
             }
+
+            .info-about-me{
+                padding: 2%;
+            p{
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+
+            .work-together-contact{
+                font-size: 1.5rem;
+            }
+        }
+        }
+    }
+
+
+    @keyframes glitch-animation-1{
+            $steps: 10;
+            @for $i from 0 through $steps{
+                #{percentage($i*(1/$steps))}{
+                clip: rect(random(100)+px, 800px, random(140)+px, 30px)
+            }
+        }
+    }
+
+    @keyframes glitch-animation-2{
+            $steps: 10;
+            @for $i from 0 through $steps{
+                #{percentage($i*(1/$steps))} {
+                clip: rect(random(100)+px, 800px, random(140)+px, 30px)
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #main-body{
+
+        #hero{
+            width: 95%;
+
+            p{
+            font-size: 8rem;
+            transform: translate(2rem, -18rem);
+            letter-spacing: .1rem;
+        }
+
+        .claudia{
+            font-size: 8rem;
+            padding: .2rem 1rem 0 1.9rem;
+            margin-bottom: 17rem;
+            margin-left: 27rem;
+            letter-spacing: .1rem;
+        }
+        
+        .more-info{
+            .fa-arrow-right{
+                font-size: 7rem;
+                left: 40%;
+                bottom: 7rem;
+            }
+            p{
+                font-size: 2rem;
+                margin: 4rem 0 0 50%;
+                letter-spacing: .3rem;
+            }
+        }
+
+            .menu-fixed{
+                transform: translateY(-35rem);
+                margin-left: 46%;
+
+                li{
+                    font-size: 1.4rem;
+                }
+            }
+
             .info-about-me{
 
             p{
-                font-size: 2.3rem;
-                line-height: 2.8rem;
+                font-size: 2rem;
+                line-height: 2.2rem;
             }
             .second-paragraph-about{
                 font-size: 1rem;
@@ -532,3 +564,4 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         }
     }
 }
+

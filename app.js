@@ -30,4 +30,3 @@ $(document).on("click", "a", function () {
 });
 
 
-
