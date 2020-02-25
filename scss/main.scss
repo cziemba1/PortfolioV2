@@ -17,13 +17,13 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
 
 @font-face{
     font-family: Monument;
-    src: local("Monument"), url("/assets/font/monumentextended-ultrabold-webfont.woff2") format("woff2"), url("/assets/font/monumentextended-ultrabold-webfont.woff") format("woff");
+    src: local("Monument"), url("assets/font/monumentextended-ultrabold-webfont.woff2") format("woff2"), url("/assets/font/monumentextended-ultrabold-webfont.woff") format("woff");
     font-weight:800;
 }
     
 @font-face{
     font-family: Monument;
-    src:local("Monument"), url("/assets/font/monumentextended-regular-webfont.woff2") format("woff2"), url("/assets/font/monumentextended-regular-webfont.woff") format("woff");
+    src:local("Monument"), url("assets/font/monumentextended-regular-webfont.woff2") format("woff2"), url("/assets/font/monumentextended-regular-webfont.woff") format("woff");
     font-weight:normal;
 }
 
