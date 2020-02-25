@@ -6,7 +6,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: Monument;
+    font-family: "Titillium Web";
     background-color: var(--blue-main);
     --blue-main: #100b22;
     --orange-main: rgb(224, 85, 31);
@@ -14,18 +14,6 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
     --glitch: #00ffff;
 }
 
-
-@font-face{
-    font-family: Monument;
-    src: local("Monument"), url("assets/font/monumentextended-ultrabold-webfont.woff2") format("woff2"), url("/assets/font/monumentextended-ultrabold-webfont.woff") format("woff");
-    font-weight:800;
-}
-    
-@font-face{
-    font-family: Monument;
-    src:local("Monument"), url("assets/font/monumentextended-regular-webfont.woff2") format("woff2"), url("/assets/font/monumentextended-regular-webfont.woff") format("woff");
-    font-weight:normal;
-}
 
 #main-body{
     overflow: hidden;
@@ -49,6 +37,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             position: absolute;
             transform: translate(2rem, -18rem);
             line-height: 1.3;
+            font-weight: 900;
         }
 
         .claudia{
@@ -57,6 +46,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             padding: .2rem 1rem 0 1.9rem;
             margin-bottom: 14rem;
             position: relative;
+            font-weight: 900;
 
     
             &::before, 
@@ -109,6 +99,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
                 color: var(--orange-main);
                 padding: 0;
                 margin: 5.6rem 0 0 8.5rem;
+                font-weight: 900;
             }
         }
 
@@ -164,6 +155,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
                     a{
                         color: white;
                         position: relative;
+                        font-weight: 900;
 
                         &:hover{
                             color: var(--orange-main);
@@ -195,26 +187,26 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             p{
                 color: white;
                 font-size: 1rem;
-                line-height: 1.5;
+                line-height: 1.7;
                 margin-top: -5rem;
                 width: 80%;
-                font-family: 'Poppins';
+                font-weight: 600;
 
                 .orange-strong-color{
                     color: var(--orange-main);
-                    font-family: 'Poppins';
+                    font-weight: ligther;
                 }
             }
 
             .work-together-contact{
                 margin-top: 14rem;
                 font-size: 1rem;
-                font-family: 'Poppins';
 
                 a{
                     color: hsl(0, 0%, 38%);
                     transition: color .3s ease-in;
                     font-size: 1.3rem;
+                    font-weight: 900;
 
                     &:visited{
                         color: hsl(0, 0%, 38%);
@@ -325,13 +317,13 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
                 opacity: 1;
                 display: flex;
                 position: absolute;
-                transform: translateY(-37rem);
+                transform: translateY(-35rem);
                 margin-left: 1rem;
 
                 li{
                     font-size: 1rem;
                     margin: 1rem;
-                    font-weight: lighter;
+                    font-weight: 900;
 
                     .active{
                             color: var(--orange-main);
@@ -376,12 +368,11 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
                     line-height: 1.2;
                     margin-top: -5rem;
                     width: 80%;
-                    font-family: 'Poppins';
+                    font-weight: 600;
                 }
                 .work-together-contact{
                     margin-top: 15rem;
                     font-size: 1.6rem;
-                    font-family: 'Poppins';
 
                     a{
                         font-size: 2rem;
@@ -455,8 +446,9 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             .info-about-me{
                 padding: 2%;
             p{
-                font-size: 1.5rem;
+                font-size: 1.7rem;
                 line-height: 2rem;
+                letter-spacing: .01rem;
             }
 
             .work-together-contact{
@@ -502,8 +494,8 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             font-size: 8rem;
             padding: .2rem 1rem 0 1.9rem;
             margin-bottom: 17rem;
-            margin-left: 27rem;
-            letter-spacing: .1rem;
+            margin-left: 20rem;
+            letter-spacing: 1rem;
         }
         
         .more-info{
@@ -532,7 +524,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
 
             p{
                 font-size: 2rem;
-                line-height: 2.2rem;
+                line-height: 2.3rem;
             }
             .second-paragraph-about{
                 font-size: 1rem;
