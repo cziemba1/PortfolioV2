@@ -2,6 +2,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
     margin: 0;
     padding: 0;
     border: 0;
+    font-size: 100%;
     vertical-align: baseline;
     list-style-type: none;
     text-decoration: none;
@@ -9,45 +10,79 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
     font-family: "Titillium Web";
     background-color: var(--blue-main);
     --blue-main: #100b22;
-    --orange-main: rgb(224, 85, 31);
-    --orange-rgba: rgba(224, 85, 31, 0.5);
+    --orange-main: #e0551f;
+    --orange-rgba: #e0551f80;
     --glitch: #00ffff;
 }
 
 
 #main-body{
-    overflow: hidden;
 
     #hero{
-        width: 100%;
-        height: 100vh;
-        position: absolute;
-        border: .05rem solid var(--orange-rgba);
         margin: 1rem;
-        height: 95%;
+        height: 100vh;
         width: 94%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        overflow: hidden;
+        align-items: flex-start;
+        overflow-x: hidden;
+
+        #scene{
+            position: absolute;
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            z-index: 10000;
+
+            div{
+                font-size: .6rem;
+                width: 1rem;
+                height: 1rem;
+                color: rgb(158, 158, 158);
+                background-color: transparent;
+            }
+
+            div:nth-of-type(1){
+                position: absolute;
+                margin-top: 50%;
+                margin-left: 30%;
+            }
+
+            div:nth-of-type(2){
+                position: absolute;
+                margin-top: 80%;
+                margin-left: 70%;
+            }
+
+            div:nth-of-type(3){
+                position: absolute;
+                margin-top: 20%;
+                margin-left: 60%;
+            }
+        }
+        
 
         p{
-            font-size: 3rem;
+            font-size: 4.5rem;
             color: white;
             position: absolute;
             transform: translate(2rem, -18rem);
             line-height: 1.3;
-            font-weight: 900;
+            font-weight: 700;
+
+            span{
+                color: var(--orange-main);
+            };
         }
 
         .claudia{
-            font-size: 3rem;
+            font-size: 4.5rem;
             color: white;
-            padding: .2rem 1rem 0 1.9rem;
-            margin-bottom: 14rem;
+            padding: 0 1rem 0 1.9rem;
             position: relative;
-            font-weight: 900;
-
+            font-weight: 700;
+            margin-bottom: 11rem;
     
             &::before, 
             &::after{
@@ -87,19 +122,15 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         
         .more-info{
             .fa-arrow-right{
-                color: white;
-                position: absolute;
-                transform: rotate(30deg);
-                font-size: 4rem;
-                left: 6rem;
-                bottom: 9rem;
+                display:none;
             }
             p{
-                font-size: .8rem;
-                color: var(--orange-main);
+                font-size: 1.1rem;
+                color: var(--orange-rgba);
                 padding: 0;
-                margin: 5.6rem 0 0 8.5rem;
-                font-weight: 900;
+                margin: 9rem 0 0 0;
+                font-weight: 400;
+                letter-spacing: .1rem;
             }
         }
 
@@ -109,11 +140,11 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         }
         .toggle-btn {
             position: fixed;
-            margin: 1rem;
             width: 40px;
             height: 12px;
             z-index: 3;
-            transform: translate(15rem, -35rem);
+            top: 0;
+            margin: 3rem 0 1rem 2rem;
             cursor: pointer;
             
             span.one {
@@ -141,7 +172,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             overflow: hidden;
 
             .data {
-                padding: 11rem 0 0 5rem;
+                padding: 8rem 0 0 5rem;
                 text-align: left;
 
 
@@ -180,82 +211,82 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
                 }
             }
         }
+    }
 
-        .info-about-me{
-            padding: 1%;
-            
-            p{
-                color: white;
-                font-size: 1rem;
-                line-height: 1.7;
-                margin-top: -5rem;
-                width: 80%;
-                font-weight: 600;
+    nav{
+        z-index: 1000;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        opacity: 0;
 
-                .orange-strong-color{
-                    color: var(--orange-main);
-                    font-weight: ligther;
-                }
-            }
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 35rem;
+            position: fixed;
+            top: 0;
+            z-index: 100;
 
-            .work-together-contact{
-                margin-top: 14rem;
-                font-size: 1rem;
+            li{
+                transform: rotate(-90deg);
+                position: relative;
+                margin-top: 4rem;
 
                 a{
-                    color: hsl(0, 0%, 38%);
-                    transition: color .3s ease-in;
-                    font-size: 1.3rem;
-                    font-weight: 900;
-
-                    &:visited{
-                        color: hsl(0, 0%, 38%);
-                    }
+                    color: rgb(163, 163, 163);
+                    transition: color 0.3s ease-in;
+                    letter-spacing: .1rem;
+                    margin-left: 10%;
 
                     &:hover{
-                        color: var(--orange-main);
+                        color: var(--orange-rgba);
                     }
-                }
-            }
-        }
-        .social-media-contact{
-            display: flex;
-            justify-content: center;
-            margin-top: .5rem;
-            margin-bottom: 2rem;
-            margin-left: 2rem;
 
-            li a{
-                color: white;
-                position: relative;
-                margin-right: 2rem;
-                color: var(--orange-main);
-                transition: color 0.3s ease-in;
-
-                &:hover{
-                    color: white;
-                }
-
-                &::after{
-                    content: '';
-                    position: absolute;
-                    top:50%;
-                    transform:translateY(380%);
-                    width: 0;
-                    left: 0;
-                    height: .3rem;
-                    background: currentColor;
-                    transition: width 0.3s ease-in;
-                }
-
-                &:hover::after{
-                    width: 100%;
                 }
             }
         }
     }
 } 
 
+#info-about-me{
+    width: 100%;
+    height: 100vh;
+    margin-left: 10%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .about-me-title{
+        display:flex;
+        flex-direction: column;
+
+        h1{
+            color: white;
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 3rem;
+
+            span{
+                color: var(--orange-main);
+                font-size: 2rem;
+            }
+        }
+    }
+    p{
+        color: white;
+        margin-right: 6rem;
+        font-size: 1rem;
+        letter-spacing: .1rem;
+        line-height: 2.3rem;
+        margin-top: 2rem;
+    }
+
+    .skills-about-me{
+        display:none;
+    }
+}
 
 @keyframes glitch-animation-1{
         $steps: 8;
@@ -275,36 +306,172 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
     }
 }
 
-@media screen and (min-width: 770px){
+@media screen and (min-width: 500px){
     #main-body{
+        nav{
+            opacity: 1;
+        }
 
-        #hero{
-            margin: 2rem;
-            height: 90%;
-            width: 91%;
+    #hero{
 
-            p{
-            font-size: 6rem;
-            transform: translate(2rem, -18rem);
-            line-height: 1.3;
+        #scene{
+
+            div{
+                font-size: .8rem;
+            }
+
+            div:nth-of-type(1){
+                margin-top: 15%;
+                margin-left: 20%;
+            }
+
+            div:nth-of-type(2){
+                margin-top: 45%;
+                margin-left: 60%;
+            }
+
+            div:nth-of-type(3){
+                margin-top: 25%;
+                margin-left: 80%;
+            }
+        }
+
+        p{
+            font-size: 6.7rem;
+            transform: translate(2rem, -19.5rem);
         }
 
         .claudia{
-            font-size: 6rem;
+            font-size: 6.7rem;
             padding: .2rem 1rem 0 1.9rem;
             margin-bottom: 10rem;
+        }
+        
+        .more-info{
+            .fa-arrow-right{
+                color: var(--orange-main);
+                position: absolute;
+                transform: rotate(30deg);
+                font-size: 5rem;
+                margin-left: 1.9rem;
+                bottom: 3rem;
+                display: block;
+            }
+            p{
+                font-size: 1.3rem;
+                margin: 9rem 0 0 6rem;
+            }
+        }
+
+        .toggle-btn {
+            position: fixed;
+            margin: 2rem 0 0 2rem;
+
+        }
+        .menu {
+            z-index: 2;
+            position: absolute;
+            background: var(--blue-main);
+            height: 100vh;
+            width: 100%;
+            top: -100%;
+            overflow: hidden;
+        }
+    }
+} 
+
+#info-about-me{
+
+    .about-me-title{
+        h1{
+            font-size: 3.7rem;
+            line-height: 3.8rem;
+            span{
+                font-size: 3rem;
+            }
+        }
+    }
+    p{
+        color: white;
+        width: 19rem;
+        font-size: 1rem;
+    }
+}
+
+@keyframes glitch-animation-1{
+        $steps: 8;
+        @for $i from 0 through $steps{
+            #{percentage($i*(1/$steps))}{
+            clip: rect(random(150)+px, 350px, random(90)+px, 30px)
+        }
+    }
+}
+
+@keyframes glitch-animation-1{
+        $steps: 8;
+        @for $i from 0 through $steps{
+            #{percentage($i*(1/$steps))}{
+            clip: rect(random(150)+px, 350px, random(90)+px, 30px)
+        }
+    }
+}
+
+@keyframes glitch-animation-2{
+        $steps: 8;
+        @for $i from 0 through $steps{
+            #{percentage($i*(1/$steps))} {
+            clip: rect(random(150)+px, 350px, random(90)+px, 30px)
+        }
+    }
+}
+}
+
+@media screen and (min-width: 770px){
+    #main-body{
+
+    #hero{
+
+        #scene{
+
+            div{
+                font-size: .8rem;
+            }
+
+            div:nth-of-type(1){
+                margin-top: 10%;
+                margin-left: 20%;
+            }
+
+            div:nth-of-type(2){
+                margin-top: 45%;
+                margin-left: 60%;
+            }
+
+            div:nth-of-type(3){
+                margin-top: 25%;
+                margin-left: 80%;
+            }
+        }
+
+        p{
+            transform: translate(2rem, -17rem);
+        }
+
+        .claudia{
+            font-size: 7rem;
+            padding: .2rem 1rem 0 1.9rem;
+            margin-bottom: 7.5rem;
 
         }
         
         .more-info{
             .fa-arrow-right{
-                font-size: 6rem;
-                left: 9rem;
-                bottom: 5rem;
+                font-size: 5rem;
+                left: 15rem;
             }
             p{
-                font-size: 1.3rem;
-                margin: 7.5rem 0 0 14rem;
+                font-size: 1.4rem;
+                margin: 9rem 0 0 21rem;
                 letter-spacing: .2rem;
             }
         }
@@ -315,74 +482,86 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             .menu-fixed{
                 visibility: visible;
                 opacity: 1;
-                display: flex;
+                display: fixed;
                 position: absolute;
-                transform: translateY(-35rem);
+                transform: translateY(-38rem);
                 margin-left: 1rem;
 
-                li{
-                    font-size: 1rem;
-                    margin: 1rem;
-                    font-weight: 900;
+                ul{
+                    display:flex;
+                    
+                        li{
+                        font-size: 1.3rem;
+                        margin: 1rem;
+                        font-weight: 400;
 
-                    .active{
-                            color: var(--orange-main);
-                        }
+                        .active{
+                                color: var(--orange-main);
+                            }
 
-                    a{
-                        color: white;
-                        position: relative;
+                        a{
+                            color: white;
+                            position: relative;
 
-                        &:hover{
-                            color: var(--orange-main);
-                        }
+                            &:hover{
+                                color: var(--orange-main);
+                            }
 
-                        &::after{
-                            content: '';
-                            position: absolute;
-                            top:50%;
-                            transform:translateY(380%);
-                            width: 0;
-                            left: 0;
-                            height: .3rem;
-                            background: currentColor;
-                            transition: width 0.3s ease-in;
-                        }
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                top:50%;
+                                transform:translateY(380%);
+                                width: 0;
+                                left: 0;
+                                height: .3rem;
+                                background: currentColor;
+                                transition: width 0.3s ease-in;
+                            }
 
-                        &:hover::after{
-                            width: 100%;
+                            &:hover::after{
+                                width: 100%;
+                            }
                         }
                     }
                 }
             }
-            .menu {
-                display: none;   
-            }
 
-            .info-about-me{
-            padding: 5%;
-
-                p{
-                    color: white;
-                    font-size: 1.6rem;
-                    line-height: 1.2;
-                    margin-top: -5rem;
-                    width: 80%;
-                    font-weight: 600;
-                }
-                .work-together-contact{
-                    margin-top: 15rem;
-                    font-size: 1.6rem;
-
-                    a{
-                        font-size: 2rem;
-                    }
-                }
-            }
+            
         }
     }
 
+#info-about-me{
+    p{
+        color: white;
+        width: 38%;
+    }
 
+    .skills-about-me{
+        display:flex;
+        position: absolute;
+        flex-direction: column;
+        width: 20rem;
+        right: 0;
+        padding-right: 5rem;
+        transform: translateY(15rem);
+
+        h1{
+            color: var(--orange-main);
+            font-size: 1.7rem;
+        }
+
+        ul li{
+            font-size: 1rem;
+            color: white;
+
+            span{
+                font-size: .8rem;
+                color: var(--orange-rgba);
+            }
+        }
+    }
+}
     @keyframes glitch-animation-1{
             $steps: 8;
             @for $i from 0 through $steps{
@@ -409,34 +588,50 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             width: 95%;
 
             p{
-            font-size: 7rem;
-            transform: translate(2rem, -18rem);
+            font-size: 8.5rem;
+            transform: translate(2rem, -11rem);
             letter-spacing: .4rem;
+        }
+        #scene{
+
+            div{
+                font-size: .8rem;
+            }
+
+            div:nth-of-type(2){
+                margin-top: 27%;
+            }
+
+            div:nth-of-type(3){
+                margin-top: 20%;
+                margin-left: 80%;
+            }
         }
 
         .claudia{
-            font-size: 7rem;
+            font-size: 8.5rem;
             padding: .2rem 1rem 0 1.9rem;
-            margin-bottom: 9rem;
+            margin-bottom: 10rem;
+            margin-left: 20rem;
             letter-spacing: .4rem;
         }
         
         .more-info{
             .fa-arrow-right{
-                font-size: 6rem;
-                left: 16rem;
-                bottom: 4rem;
+                font-size: 7.5rem;
+                left: 20rem;
+                bottom: 3rem;
+                display: block;
             }
             p{
-                font-size: 1.3rem;
-                margin: 8.5rem 0 0 22rem;
+                font-size: 1.5rem;
+                margin: 1.7rem 0 0 29rem;
                 letter-spacing: .3rem;
             }
         }
 
             .menu-fixed{
                 transform: translateY(-35rem);
-                margin-left: 30%;
 
                 li{
                     font-size: 1.5rem;
@@ -458,7 +653,33 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
         }
     }
 
+#info-about-me{
+    p{
+        width: 49%;
+    }
 
+    .skills-about-me{
+        width: 26rem;
+        transform: translateY(4rem);
+        border-left: .01rem solid var(--orange-main);
+        padding-left: 1rem;
+
+        h1{
+            font-size: 2rem;
+            letter-spacing: .1rem;
+        }
+
+        ul li{
+            font-size: 1.4rem;
+            color: white;
+
+            span{
+                font-size: 1.1rem;
+                color: var(--orange-rgba);
+            }
+        }
+    }
+}
     @keyframes glitch-animation-1{
             $steps: 10;
             @for $i from 0 through $steps{
@@ -478,6 +699,8 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
     }
 }
 
+
+
 @media screen and (min-width: 1200px){
     #main-body{
 
@@ -485,15 +708,32 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             width: 95%;
 
             p{
-            font-size: 8rem;
-            transform: translate(2rem, -18rem);
+            font-size: 9rem;
+            transform: translate(2rem, -10rem);
             letter-spacing: .1rem;
         }
 
+        #scene{
+
+            div{
+                font-size: .8rem;
+            }
+
+            div:nth-of-type(1){
+                margin-top: 5%;
+            }
+
+            div:nth-of-type(2){
+                margin-top: 22%;
+                margin-left: 40%;
+            }
+
+        }
+
         .claudia{
-            font-size: 8rem;
+            font-size: 9rem;
             padding: .2rem 1rem 0 1.9rem;
-            margin-bottom: 17rem;
+            margin-bottom: 9rem;
             margin-left: 20rem;
             letter-spacing: 1rem;
         }
@@ -502,41 +742,64 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
             .fa-arrow-right{
                 font-size: 7rem;
                 left: 40%;
-                bottom: 7rem;
+                bottom: 2rem;
             }
             p{
-                font-size: 2rem;
-                margin: 4rem 0 0 50%;
+                font-size: 1.8rem;
+                margin: 1.2rem 0 0 51%;
                 letter-spacing: .3rem;
             }
         }
 
             .menu-fixed{
-                transform: translateY(-35rem);
-                margin-left: 46%;
+                transform: translateY(-38.5rem);
+                margin-left: 60%;
 
                 li{
                     font-size: 1.4rem;
                 }
             }
-
-            .info-about-me{
-
-            p{
-                font-size: 2rem;
-                line-height: 2.3rem;
-            }
-            .second-paragraph-about{
-                font-size: 1rem;
-                line-height: 1.4rem;
-            }
-            .work-together-contact{
-                font-size: 2.9rem;
-            }
-        }
         }
     }
 
+#info-about-me{
+    .about-me-title{
+        h1{
+            font-size: 4.9rem;
+            line-height: 4.9rem;
+            span{
+                font-size: 4rem;
+            }
+        }
+    }
+    p{
+        width: 40%;
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+
+    .skills-about-me{
+        width: 37rem;
+        transform: translateY(4rem);
+        border-left: .01rem solid var(--orange-main);
+        padding-left: 2rem;
+
+        h1{
+            font-size: 2.7rem;
+            letter-spacing: .1rem;
+        }
+
+        ul li{
+            font-size: 1.8rem;
+            color: white;
+
+            span{
+                font-size: 1.5rem;
+                color: var(--orange-rgba);
+            }
+        }
+    }
+}
 
     @keyframes glitch-animation-1{
             $steps: 10;

@@ -1,4 +1,7 @@
 
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene);
+
 var t1 = new TimelineMax({ paused: true });
 
 t1.to(".one", 0.8, {
