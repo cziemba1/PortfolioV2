@@ -3,252 +3,95 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
   padding: 0;
   border: 0;
   font-size: 100%;
+  font-family: "Teko";
   vertical-align: baseline;
   list-style-type: none;
   text-decoration: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Titillium Web";
-  background-color: var(--blue-main);
-  --blue-main: #100b22;
-  --orange-main: #e0551f;
-  --orange-rgba: #e0551f80;
-  --glitch: #00ffff;
+  --dark-pink: #3d290e;
+  --salmon: #ebcdcd;
+  --main-dark-color: #c53026;
+  --main-light-color: #f2eebe;
 }
 
-#main-body #hero {
-  margin: 1rem;
-  height: 100vh;
-  width: 94%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  overflow-x: hidden;
-}
-
-#main-body #hero #scene {
-  position: absolute;
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  z-index: 10000;
-}
-
-#main-body #hero #scene div {
-  font-size: .6rem;
-  width: 1rem;
-  height: 1rem;
-  color: #9e9e9e;
-  background-color: transparent;
-}
-
-#main-body #hero #scene div:nth-of-type(1) {
-  position: absolute;
-  margin-top: 50%;
-  margin-left: 30%;
-}
-
-#main-body #hero #scene div:nth-of-type(2) {
-  position: absolute;
-  margin-top: 80%;
-  margin-left: 70%;
-}
-
-#main-body #hero #scene div:nth-of-type(3) {
-  position: absolute;
-  margin-top: 20%;
-  margin-left: 60%;
-}
-
-#main-body #hero p {
-  font-size: 4.5rem;
-  color: white;
-  position: absolute;
-  -webkit-transform: translate(2rem, -18rem);
-          transform: translate(2rem, -18rem);
-  line-height: 1.3;
-  font-weight: 700;
-}
-
-#main-body #hero p span {
-  color: var(--orange-main);
-}
-
-#main-body #hero .claudia {
-  font-size: 4.5rem;
-  color: white;
-  padding: 0 1rem 0 1.9rem;
-  position: relative;
-  font-weight: 700;
-  margin-bottom: 11rem;
-}
-
-#main-body #hero .claudia::before, #main-body #hero .claudia::after {
-  padding: .2rem 1rem 0 1.9rem;
-  color: white;
-  content: attr(data-glitch);
-  position: absolute;
-  width: 90%;
-  height: 90%;
-  background: var(--blue-main);
-  overflow: hidden;
-  top: 0;
-}
-
-#main-body #hero .claudia::before {
-  left: 3px;
-  text-shadow: -2px 0 var(--orange-main);
-  -webkit-animation-name: glitch-animation-1;
-          animation-name: glitch-animation-1;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: reverse-alternate;
-          animation-direction: reverse-alternate;
-}
-
-#main-body #hero .claudia::after {
-  left: -3px;
-  text-shadow: -2px 0 var(--glitch);
-  -webkit-animation-name: glitch-animation-2;
-          animation-name: glitch-animation-2;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: reverse-alternate;
-          animation-direction: reverse-alternate;
-}
-
-#main-body #hero .more-info .fa-arrow-right {
-  display: none;
-}
-
-#main-body #hero .more-info p {
-  font-size: 1.1rem;
-  color: var(--orange-rgba);
-  padding: 0;
-  margin: 9rem 0 0 0;
-  font-weight: 400;
-  letter-spacing: .1rem;
-}
-
-#main-body #hero .menu-fixed {
-  visibility: hidden;
-  opacity: 0;
-}
-
-#main-body #hero .toggle-btn {
-  position: fixed;
-  width: 40px;
-  height: 12px;
-  z-index: 3;
-  top: 0;
-  margin: 3rem 0 1rem 2rem;
-  cursor: pointer;
-}
-
-#main-body #hero .toggle-btn span.one {
-  position: absolute;
-  width: 33px;
-  height: 2px;
-  background: #fff;
-}
-
-#main-body #hero .toggle-btn span.two {
-  position: absolute;
-  width: 33px;
-  height: 2px;
-  background: #fff;
-  margin-top: 12px;
-}
-
-#main-body #hero .menu {
-  z-index: 2;
-  position: absolute;
-  background: var(--blue-main);
+#carousel-main {
   height: 100vh;
   width: 100%;
-  top: -100%;
-  overflow: hidden;
 }
 
-#main-body #hero .menu .data {
-  padding: 8rem 0 0 5rem;
-  text-align: left;
+#carousel-main .carousel-caption {
+  -webkit-transform: translateY(-4rem);
+          transform: translateY(-4rem);
 }
 
-#main-body #hero .menu .data ul li {
+#carousel-main .carousel-caption h1 {
+  color: var(--main-light-color);
+  font-size: 4rem;
+  -webkit-transform: translateY(-9rem);
+          transform: translateY(-9rem);
+  font-weight: bolder;
+}
+
+#carousel-main .carousel-caption h5 {
+  -webkit-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+  color: var(--main-dark-color);
   font-size: 2rem;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-  position: relative;
-  -webkit-transform: translateY(7rem);
-          transform: translateY(7rem);
+  font-weight: 600;
 }
 
-#main-body #hero .menu .data ul li a {
-  color: white;
-  position: relative;
-  font-weight: 900;
+#carousel-main .carousel-caption p {
+  color: var(--main-light-color);
+  margin-bottom: 5rem;
+  font-size: 1.2rem;
 }
 
-#main-body #hero .menu .data ul li a:hover {
-  color: var(--orange-main);
-}
-
-#main-body #hero .menu .data ul li a::after {
-  content: '';
+#carousel-main .carousel-caption h2 {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(380%);
-          transform: translateY(380%);
-  width: 0;
-  left: 0;
-  height: .3rem;
-  background: currentColor;
-  -webkit-transition: width 0.3s ease-in;
-  transition: width 0.3s ease-in;
+  margin-left: 30%;
+  color: var(--main-light-color);
+  -webkit-transform: translate(7rem, 3rem);
+          transform: translate(7rem, 3rem);
 }
 
-#main-body #hero .menu .data ul li a:hover::after {
+#carousel-main img {
+  height: 100vh;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: brightness(0.3);
+          filter: brightness(0.3);
 }
 
-#main-body nav {
-  z-index: 1000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  opacity: 0;
+#carousel-main .carousel-control-prev {
+  position: absolute;
+  -webkit-transform: translate(10%, 38rem);
+          transform: translate(10%, 38rem);
+  height: 4rem;
 }
 
-#main-body nav ul {
+#carousel-main .carousel-control-next {
+  position: absolute;
+  -webkit-transform: translate(-450%, 38rem);
+          transform: translate(-450%, 38rem);
+  height: 4rem;
+}
+
+#carousel-main .carousel-indicators {
+  position: absolute;
+  -webkit-transform: translate(-45%, -1rem);
+          transform: translate(-45%, -1rem);
+}
+
+nav #menu {
+  position: absolute;
+  width: 15rem;
+  height: 100vh;
+  background-color: var(--main-dark-color);
+  top: 0;
+  left: -15rem;
+  z-index: 20;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,35 +101,309 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;
+}
+
+nav #menu .menu-close {
+  position: absolute;
+  background-color: var(--main-dark-color);
+  width: 3.5rem;
+  height: 3.5rem;
+  top: 0rem;
+  left: 15rem;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+nav #menu .menu-close span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  background: var(--main-light-color);
+  margin-left: .8rem;
+  margin-top: 1rem;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+nav #menu .menu-close span:nth-child(1) {
+  top: 0px;
+}
+
+nav #menu .menu-close span:nth-child(2),
+nav #menu .menu-close span:nth-child(3) {
+  top: 8px;
+}
+
+nav #menu .menu-close span:nth-child(4) {
+  top: 16px;
+}
+
+nav #menu .menu-close.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+nav #menu .menu-close.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+nav #menu .menu-close.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+nav #menu .menu-close.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+nav #menu .menu-logo {
+  padding: 1rem;
+  text-align: center;
+}
+
+nav #menu .menu-logo h1 {
+  color: var(--main-light-color);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  font-weight: 600;
+}
+
+nav #menu .menu-logo h5 {
+  color: var(--dark-pink);
+  font-size: 1rem;
+  margin-top: .5rem;
+}
+
+nav #menu .menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav #menu .menu-items ul li {
+  margin-top: 1rem;
+}
+
+nav #menu .menu-items ul li a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: .5rem;
+  color: var(--main-light-color);
+  position: relative;
+  width: 100%;
+}
+
+nav #menu .menu-items ul li a:hover {
+  color: var(--dark-pink);
+  text-decoration: none;
+}
+
+nav #menu .menu-items ul li a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(380%);
+          transform: translateY(380%);
+  width: 0;
+  left: 0;
+  height: .1rem;
+  margin-top: .3rem;
+  background: currentColor;
+  -webkit-transition: width 0.3s ease-in;
+  transition: width 0.3s ease-in;
+}
+
+nav #menu .menu-items ul li a:hover::after {
+  width: 100%;
+}
+
+nav #menu .menu-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav #menu .menu-social a {
+  margin: 1rem;
+  font-size: 1.2rem;
+  color: var(--dark-pink);
+}
+
+nav .menu-close.open {
+  left: 30rem;
+}
+
+nav #menu.open {
+  left: 0;
+}
+
+#intro-about {
+  background-color: var(--dark-pink);
   height: 35rem;
-  position: fixed;
-  top: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 25rem;
+}
+
+#intro-about h1,
+#intro-about h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--main-dark-color);
+  margin-bottom: 1rem;
+}
+
+#intro-about p {
+  margin: 0 10%;
+  color: var(--main-light-color);
+  z-index: 10;
+  font-weight: 600;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+#intro-creations {
+  background-color: var(--main-light-color);
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 25rem;
+}
+
+#intro-creations h1,
+#intro-creations h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--main-dark-color);
+  margin-bottom: 1rem;
+}
+
+#intro-creations p {
+  margin: 0 10%;
+  color: var(--dark-pink);
+  z-index: 10;
+  font-weight: 600;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+.intro-creations-products {
+  background-color: var(--main-light-color);
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.intro-creations-products .creations .product {
+  background-color: var(--main-dark-color);
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40rem;
+  z-index: 2;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.intro-creations-products .creations .product h1 {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  color: var(--main-light-color);
   z-index: 100;
 }
 
-#main-body nav ul li {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+.intro-creations-products .creations .product .product-img {
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 80%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  left: 0;
+  top: 0;
   position: relative;
-  margin-top: 4rem;
+  z-index: 3;
 }
 
-#main-body nav ul li a {
-  color: #a3a3a3;
-  -webkit-transition: color 0.3s ease-in;
-  transition: color 0.3s ease-in;
-  letter-spacing: .1rem;
-  margin-left: 10%;
+.intro-creations-products .creations .product:hover .product-img {
+  height: 30%;
+  left: -60%;
+  height: 77%;
 }
 
-#main-body nav ul li a:hover {
-  color: var(--orange-rgba);
+.intro-creations-products .creations .product:hover .product-hover {
+  opacity: 1;
 }
 
-#info-about-me {
-  width: 100%;
-  height: 100vh;
-  margin-left: 10%;
+.intro-creations-products .creations .product .product-hover {
+  position: absolute;
+  padding: 2rem 0 0 7rem;
+  height: 40rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,9 +414,166 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 
-#info-about-me .about-me-title {
+.intro-creations-products .creations .product .product-hover p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--main-light-color);
+  text-transform: uppercase;
+}
+
+.intro-creations-products .creations .product .product-hover p:nth-of-type(4) {
+  color: var(--dark-pink);
+}
+
+#bakery-info {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../assets/imgs/roman-kraft-P8zDQz8Y2Vc-unsplash.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/imgs/roman-kraft-P8zDQz8Y2Vc-unsplash.jpg");
+  background-size: cover;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+#bakery-info h1 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--main-dark-color);
+  text-transform: uppercase;
+}
+
+#bakery-info p {
+  color: var(--main-light-color);
+  width: 60%;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+#story-info {
+  background-color: var(--main-light-color);
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#story-info h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--main-dark-color);
+  margin: 2rem 10% 0 10%;
+}
+
+#story-info h2 {
+  margin: 2rem 10%;
+  color: var(--dark-pink);
+  z-index: 10;
+  font-weight: 600;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+#story-info p {
+  margin: 0 10% 2rem 10%;
+  font-size: 1.3rem;
+  letter-spacing: .1rem;
+}
+
+#locations-info {
+  background-color: var(--dark-pink);
+  width: 100%;
+  height: 40rem;
+  padding: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#locations-info h1 {
+  color: var(--main-dark-color);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+#locations-info div {
+  border-bottom: 0.02rem solid var(--main-dark-color);
+  margin-bottom: 1rem;
+}
+
+#locations-info div h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--main-light-color);
+  letter-spacing: .3rem;
+}
+
+#locations-info div p {
+  color: var(--main-light-color);
+  font-size: 1.4rem;
+  letter-spacing: .1rem;
+}
+
+#contact-info {
+  background-color: var(--main-dark-color);
+  height: 100vh;
+  padding: 2rem 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#contact-info div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,1032 +583,667 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
           flex-direction: column;
 }
 
-#info-about-me .about-me-title h1 {
-  color: white;
-  font-size: 3rem;
+#contact-info div h1 {
+  color: var(--dark-pink);
+  font-size: 1.6rem;
   font-weight: 600;
-  line-height: 3rem;
 }
 
-#info-about-me .about-me-title h1 span {
-  color: var(--orange-main);
-  font-size: 2rem;
+#contact-info div a {
+  color: var(--dark-pink);
+  font-size: 1.6rem;
 }
 
-#info-about-me p {
-  color: white;
-  margin-right: 6rem;
-  font-size: 1rem;
-  letter-spacing: .1rem;
-  line-height: 2.3rem;
-  margin-top: 2rem;
+#contact-info div a:nth-of-type(2) {
+  margin-bottom: 1.5rem;
 }
 
-#info-about-me .skills-about-me {
-  display: none;
+#contact-info div h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--dark-pink);
 }
 
-@-webkit-keyframes glitch-animation-1 {
-  0% {
-    clip: rect(144px, 350px, 2px, 30px);
-  }
-  12.5% {
-    clip: rect(13px, 350px, 7px, 30px);
-  }
-  25% {
-    clip: rect(122px, 350px, 63px, 30px);
-  }
-  37.5% {
-    clip: rect(93px, 350px, 30px, 30px);
-  }
-  50% {
-    clip: rect(91px, 350px, 80px, 30px);
-  }
-  62.5% {
-    clip: rect(103px, 350px, 28px, 30px);
-  }
-  75% {
-    clip: rect(1px, 350px, 19px, 30px);
-  }
-  87.5% {
-    clip: rect(111px, 350px, 61px, 30px);
-  }
-  100% {
-    clip: rect(1px, 350px, 22px, 30px);
-  }
+#contact-info div p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: var(--dark-pink);
 }
 
-@keyframes glitch-animation-1 {
-  0% {
-    clip: rect(144px, 350px, 2px, 30px);
+@media screen and (min-width: 700px) {
+  #carousel-main .carousel-caption {
+    -webkit-transform: translateY(-4rem);
+            transform: translateY(-4rem);
   }
-  12.5% {
-    clip: rect(13px, 350px, 7px, 30px);
-  }
-  25% {
-    clip: rect(122px, 350px, 63px, 30px);
-  }
-  37.5% {
-    clip: rect(93px, 350px, 30px, 30px);
-  }
-  50% {
-    clip: rect(91px, 350px, 80px, 30px);
-  }
-  62.5% {
-    clip: rect(103px, 350px, 28px, 30px);
-  }
-  75% {
-    clip: rect(1px, 350px, 19px, 30px);
-  }
-  87.5% {
-    clip: rect(111px, 350px, 61px, 30px);
-  }
-  100% {
-    clip: rect(1px, 350px, 22px, 30px);
-  }
-}
-
-@-webkit-keyframes glitch-animation-2 {
-  0% {
-    clip: rect(115px, 350px, 49px, 30px);
-  }
-  12.5% {
-    clip: rect(129px, 350px, 26px, 30px);
-  }
-  25% {
-    clip: rect(136px, 350px, 55px, 30px);
-  }
-  37.5% {
-    clip: rect(92px, 350px, 54px, 30px);
-  }
-  50% {
-    clip: rect(40px, 350px, 12px, 30px);
-  }
-  62.5% {
-    clip: rect(92px, 350px, 4px, 30px);
-  }
-  75% {
-    clip: rect(22px, 350px, 2px, 30px);
-  }
-  87.5% {
-    clip: rect(54px, 350px, 37px, 30px);
-  }
-  100% {
-    clip: rect(28px, 350px, 60px, 30px);
-  }
-}
-
-@keyframes glitch-animation-2 {
-  0% {
-    clip: rect(115px, 350px, 49px, 30px);
-  }
-  12.5% {
-    clip: rect(129px, 350px, 26px, 30px);
-  }
-  25% {
-    clip: rect(136px, 350px, 55px, 30px);
-  }
-  37.5% {
-    clip: rect(92px, 350px, 54px, 30px);
-  }
-  50% {
-    clip: rect(40px, 350px, 12px, 30px);
-  }
-  62.5% {
-    clip: rect(92px, 350px, 4px, 30px);
-  }
-  75% {
-    clip: rect(22px, 350px, 2px, 30px);
-  }
-  87.5% {
-    clip: rect(54px, 350px, 37px, 30px);
-  }
-  100% {
-    clip: rect(28px, 350px, 60px, 30px);
-  }
-}
-
-@media screen and (min-width: 500px) {
-  #main-body nav {
-    opacity: 1;
-  }
-  #main-body #hero #scene div {
-    font-size: .8rem;
-  }
-  #main-body #hero #scene div:nth-of-type(1) {
-    margin-top: 15%;
-    margin-left: 20%;
-  }
-  #main-body #hero #scene div:nth-of-type(2) {
-    margin-top: 45%;
-    margin-left: 60%;
-  }
-  #main-body #hero #scene div:nth-of-type(3) {
-    margin-top: 25%;
-    margin-left: 80%;
-  }
-  #main-body #hero p {
-    font-size: 6.7rem;
-    -webkit-transform: translate(2rem, -19.5rem);
-            transform: translate(2rem, -19.5rem);
-  }
-  #main-body #hero .claudia {
-    font-size: 6.7rem;
-    padding: .2rem 1rem 0 1.9rem;
-    margin-bottom: 10rem;
-  }
-  #main-body #hero .more-info .fa-arrow-right {
-    color: var(--orange-main);
-    position: absolute;
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
+  #carousel-main .carousel-caption h1 {
     font-size: 5rem;
-    margin-left: 1.9rem;
-    bottom: 3rem;
-    display: block;
+    -webkit-transform: translateY(-9rem);
+            transform: translateY(-9rem);
   }
-  #main-body #hero .more-info p {
-    font-size: 1.3rem;
-    margin: 9rem 0 0 6rem;
+  #carousel-main .carousel-caption h5 {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+    font-size: 2rem;
   }
-  #main-body #hero .toggle-btn {
-    position: fixed;
-    margin: 2rem 0 0 2rem;
+  #carousel-main .carousel-caption p {
+    margin-bottom: 5rem;
+    font-size: 1.4rem;
   }
-  #main-body #hero .menu {
-    z-index: 2;
+  #carousel-main .carousel-caption h2 {
+    margin-left: 60%;
+    -webkit-transform: translate(7rem, 3rem);
+            transform: translate(7rem, 3rem);
+  }
+  #carousel-main .carousel-control-prev {
+    -webkit-transform: translate(20%, 38rem);
+            transform: translate(20%, 38rem);
+  }
+  #carousel-main .carousel-control-next {
+    -webkit-transform: translate(-500%, 38rem);
+            transform: translate(-500%, 38rem);
+  }
+  #carousel-main .carousel-indicators {
     position: absolute;
-    background: var(--blue-main);
+    -webkit-transform: translate(-50%, -1rem);
+            transform: translate(-50%, -1rem);
+  }
+  nav #menu {
+    width: 15rem;
     height: 100vh;
-    width: 100%;
-    top: -100%;
-    overflow: hidden;
+    top: 0;
+    left: -15rem;
+    z-index: 20;
   }
-  #info-about-me .about-me-title h1 {
-    font-size: 3.7rem;
-    line-height: 3.8rem;
-  }
-  #info-about-me .about-me-title h1 span {
-    font-size: 3rem;
-  }
-  #info-about-me p {
-    color: white;
-    width: 19rem;
-    font-size: 1rem;
-  }
-  @-webkit-keyframes glitch-animation-1 {
-    0% {
-      clip: rect(127px, 350px, 70px, 30px);
-    }
-    12.5% {
-      clip: rect(109px, 350px, 15px, 30px);
-    }
-    25% {
-      clip: rect(33px, 350px, 69px, 30px);
-    }
-    37.5% {
-      clip: rect(75px, 350px, 12px, 30px);
-    }
-    50% {
-      clip: rect(18px, 350px, 75px, 30px);
-    }
-    62.5% {
-      clip: rect(97px, 350px, 62px, 30px);
-    }
-    75% {
-      clip: rect(73px, 350px, 55px, 30px);
-    }
-    87.5% {
-      clip: rect(18px, 350px, 55px, 30px);
-    }
-    100% {
-      clip: rect(3px, 350px, 48px, 30px);
-    }
-  }
-  @keyframes glitch-animation-1 {
-    0% {
-      clip: rect(127px, 350px, 70px, 30px);
-    }
-    12.5% {
-      clip: rect(109px, 350px, 15px, 30px);
-    }
-    25% {
-      clip: rect(33px, 350px, 69px, 30px);
-    }
-    37.5% {
-      clip: rect(75px, 350px, 12px, 30px);
-    }
-    50% {
-      clip: rect(18px, 350px, 75px, 30px);
-    }
-    62.5% {
-      clip: rect(97px, 350px, 62px, 30px);
-    }
-    75% {
-      clip: rect(73px, 350px, 55px, 30px);
-    }
-    87.5% {
-      clip: rect(18px, 350px, 55px, 30px);
-    }
-    100% {
-      clip: rect(3px, 350px, 48px, 30px);
-    }
-  }
-  @keyframes glitch-animation-1 {
-    0% {
-      clip: rect(69px, 350px, 3px, 30px);
-    }
-    12.5% {
-      clip: rect(137px, 350px, 63px, 30px);
-    }
-    25% {
-      clip: rect(99px, 350px, 65px, 30px);
-    }
-    37.5% {
-      clip: rect(89px, 350px, 49px, 30px);
-    }
-    50% {
-      clip: rect(69px, 350px, 17px, 30px);
-    }
-    62.5% {
-      clip: rect(25px, 350px, 58px, 30px);
-    }
-    75% {
-      clip: rect(47px, 350px, 36px, 30px);
-    }
-    87.5% {
-      clip: rect(6px, 350px, 10px, 30px);
-    }
-    100% {
-      clip: rect(31px, 350px, 81px, 30px);
-    }
-  }
-  @-webkit-keyframes glitch-animation-2 {
-    0% {
-      clip: rect(19px, 350px, 70px, 30px);
-    }
-    12.5% {
-      clip: rect(122px, 350px, 11px, 30px);
-    }
-    25% {
-      clip: rect(120px, 350px, 35px, 30px);
-    }
-    37.5% {
-      clip: rect(94px, 350px, 12px, 30px);
-    }
-    50% {
-      clip: rect(44px, 350px, 42px, 30px);
-    }
-    62.5% {
-      clip: rect(47px, 350px, 51px, 30px);
-    }
-    75% {
-      clip: rect(53px, 350px, 54px, 30px);
-    }
-    87.5% {
-      clip: rect(48px, 350px, 41px, 30px);
-    }
-    100% {
-      clip: rect(82px, 350px, 73px, 30px);
-    }
-  }
-  @keyframes glitch-animation-2 {
-    0% {
-      clip: rect(19px, 350px, 70px, 30px);
-    }
-    12.5% {
-      clip: rect(122px, 350px, 11px, 30px);
-    }
-    25% {
-      clip: rect(120px, 350px, 35px, 30px);
-    }
-    37.5% {
-      clip: rect(94px, 350px, 12px, 30px);
-    }
-    50% {
-      clip: rect(44px, 350px, 42px, 30px);
-    }
-    62.5% {
-      clip: rect(47px, 350px, 51px, 30px);
-    }
-    75% {
-      clip: rect(53px, 350px, 54px, 30px);
-    }
-    87.5% {
-      clip: rect(48px, 350px, 41px, 30px);
-    }
-    100% {
-      clip: rect(82px, 350px, 73px, 30px);
-    }
-  }
-}
-
-@media screen and (min-width: 770px) {
-  #main-body #hero #scene div {
-    font-size: .8rem;
-  }
-  #main-body #hero #scene div:nth-of-type(1) {
-    margin-top: 10%;
-    margin-left: 20%;
-  }
-  #main-body #hero #scene div:nth-of-type(2) {
-    margin-top: 45%;
-    margin-left: 60%;
-  }
-  #main-body #hero #scene div:nth-of-type(3) {
-    margin-top: 25%;
-    margin-left: 80%;
-  }
-  #main-body #hero p {
-    -webkit-transform: translate(2rem, -17rem);
-            transform: translate(2rem, -17rem);
-  }
-  #main-body #hero .claudia {
-    font-size: 7rem;
-    padding: .2rem 1rem 0 1.9rem;
-    margin-bottom: 7.5rem;
-  }
-  #main-body #hero .more-info .fa-arrow-right {
-    font-size: 5rem;
+  nav #menu .menu-close {
+    width: 3.5rem;
+    height: 3.5rem;
+    top: 0rem;
     left: 15rem;
   }
-  #main-body #hero .more-info p {
-    font-size: 1.4rem;
-    margin: 9rem 0 0 21rem;
-    letter-spacing: .2rem;
-  }
-  #main-body #hero .toggle-btn {
-    display: none;
-  }
-  #main-body #hero .menu-fixed {
-    visibility: visible;
+  nav #menu .menu-close span {
+    height: 2px;
+    margin-left: .8rem;
+    margin-top: 1rem;
     opacity: 1;
-    display: fixed;
-    position: absolute;
-    -webkit-transform: translateY(-38rem);
-            transform: translateY(-38rem);
-    margin-left: 1rem;
-  }
-  #main-body #hero .menu-fixed ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  #main-body #hero .menu-fixed ul li {
-    font-size: 1.3rem;
-    margin: 1rem;
-    font-weight: 400;
-  }
-  #main-body #hero .menu-fixed ul li .active {
-    color: var(--orange-main);
-  }
-  #main-body #hero .menu-fixed ul li a {
-    color: white;
-    position: relative;
-  }
-  #main-body #hero .menu-fixed ul li a:hover {
-    color: var(--orange-main);
-  }
-  #main-body #hero .menu-fixed ul li a::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(380%);
-            transform: translateY(380%);
-    width: 0;
     left: 0;
-    height: .3rem;
-    background: currentColor;
-    -webkit-transition: width 0.3s ease-in;
-    transition: width 0.3s ease-in;
   }
-  #main-body #hero .menu-fixed ul li a:hover::after {
+  nav #menu .menu-logo {
+    padding: 1rem;
+  }
+  nav #menu .menu-logo h1 {
+    font-size: 1.5rem;
+    letter-spacing: .5rem;
+  }
+  nav #menu .menu-logo h5 {
+    font-size: 1rem;
+    margin-top: .5rem;
+  }
+  nav #menu .menu-items {
+    padding: 1rem;
+  }
+  nav #menu .menu-items ul li {
+    margin-top: 1rem;
+  }
+  nav #menu .menu-items ul li a {
+    font-size: 1.2rem;
+    padding: .5rem;
+  }
+  nav #menu .menu-social a {
+    margin: 1rem;
+    font-size: 1.2rem;
+  }
+  #intro-about {
+    height: 40rem;
     width: 100%;
+    height: 25rem;
   }
-  #info-about-me p {
-    color: white;
-    width: 38%;
+  #intro-about h1,
+  #intro-about h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
-  #info-about-me .skills-about-me {
+  #intro-about p {
+    margin: 0 10%;
+    font-size: 1.6rem;
+  }
+  #intro-creations {
+    height: 25rem;
+  }
+  #intro-creations h1,
+  #intro-creations h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  #intro-creations p {
+    margin: 0 10%;
+    font-size: 1.6rem;
+  }
+  .intro-creations-products .creations .product {
+    background-color: var(--main-dark-color);
+    padding: 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: absolute;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 20rem;
-    right: 0;
-    padding-right: 5rem;
-    -webkit-transform: translateY(15rem);
-            transform: translateY(15rem);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 40rem;
+    z-index: 2;
+    margin-bottom: 1rem;
+    cursor: pointer;
   }
-  #info-about-me .skills-about-me h1 {
-    color: var(--orange-main);
-    font-size: 1.7rem;
+  .intro-creations-products .creations .product h1 {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    color: var(--main-light-color);
+    z-index: 100;
   }
-  #info-about-me .skills-about-me ul li {
-    font-size: 1rem;
-    color: white;
+  .intro-creations-products .creations .product .product-img {
+    cursor: pointer;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 80%;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    left: 0;
+    top: 0;
+    position: relative;
+    z-index: 3;
   }
-  #info-about-me .skills-about-me ul li span {
-    font-size: .8rem;
-    color: var(--orange-rgba);
+  .intro-creations-products .creations .product:hover .product-img {
+    height: 30%;
+    left: -60%;
+    height: 77%;
   }
-  @-webkit-keyframes glitch-animation-1 {
-    0% {
-      clip: rect(135px, 500px, 68px, 30px);
-    }
-    12.5% {
-      clip: rect(132px, 500px, 14px, 30px);
-    }
-    25% {
-      clip: rect(23px, 500px, 13px, 30px);
-    }
-    37.5% {
-      clip: rect(16px, 500px, 81px, 30px);
-    }
-    50% {
-      clip: rect(52px, 500px, 56px, 30px);
-    }
-    62.5% {
-      clip: rect(11px, 500px, 22px, 30px);
-    }
-    75% {
-      clip: rect(85px, 500px, 81px, 30px);
-    }
-    87.5% {
-      clip: rect(73px, 500px, 57px, 30px);
-    }
-    100% {
-      clip: rect(84px, 500px, 63px, 30px);
-    }
+  .intro-creations-products .creations .product:hover .product-hover {
+    opacity: 1;
   }
-  @keyframes glitch-animation-1 {
-    0% {
-      clip: rect(135px, 500px, 68px, 30px);
-    }
-    12.5% {
-      clip: rect(132px, 500px, 14px, 30px);
-    }
-    25% {
-      clip: rect(23px, 500px, 13px, 30px);
-    }
-    37.5% {
-      clip: rect(16px, 500px, 81px, 30px);
-    }
-    50% {
-      clip: rect(52px, 500px, 56px, 30px);
-    }
-    62.5% {
-      clip: rect(11px, 500px, 22px, 30px);
-    }
-    75% {
-      clip: rect(85px, 500px, 81px, 30px);
-    }
-    87.5% {
-      clip: rect(73px, 500px, 57px, 30px);
-    }
-    100% {
-      clip: rect(84px, 500px, 63px, 30px);
-    }
+  .intro-creations-products .creations .product .product-hover {
+    -webkit-transition: all 1s ease-in;
+    transition: all 1s ease-in;
   }
-  @-webkit-keyframes glitch-animation-2 {
-    0% {
-      clip: rect(133px, 500px, 73px, 30px);
-    }
-    12.5% {
-      clip: rect(98px, 500px, 41px, 30px);
-    }
-    25% {
-      clip: rect(146px, 500px, 84px, 30px);
-    }
-    37.5% {
-      clip: rect(129px, 500px, 14px, 30px);
-    }
-    50% {
-      clip: rect(143px, 500px, 20px, 30px);
-    }
-    62.5% {
-      clip: rect(141px, 500px, 26px, 30px);
-    }
-    75% {
-      clip: rect(37px, 500px, 73px, 30px);
-    }
-    87.5% {
-      clip: rect(68px, 500px, 37px, 30px);
-    }
-    100% {
-      clip: rect(54px, 500px, 54px, 30px);
-    }
+  .intro-creations-products .creations .product .product-hover p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
-  @keyframes glitch-animation-2 {
-    0% {
-      clip: rect(133px, 500px, 73px, 30px);
-    }
-    12.5% {
-      clip: rect(98px, 500px, 41px, 30px);
-    }
-    25% {
-      clip: rect(146px, 500px, 84px, 30px);
-    }
-    37.5% {
-      clip: rect(129px, 500px, 14px, 30px);
-    }
-    50% {
-      clip: rect(143px, 500px, 20px, 30px);
-    }
-    62.5% {
-      clip: rect(141px, 500px, 26px, 30px);
-    }
-    75% {
-      clip: rect(37px, 500px, 73px, 30px);
-    }
-    87.5% {
-      clip: rect(68px, 500px, 37px, 30px);
-    }
-    100% {
-      clip: rect(54px, 500px, 54px, 30px);
-    }
+  .intro-creations-products .creations .product .product-hover p:nth-of-type(4) {
+    color: var(--dark-pink);
+  }
+  #bakery-info h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  #bakery-info p {
+    width: 60%;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  #story-info h1 {
+    font-size: 1.5rem;
+    margin: 2rem 10% 0 10%;
+  }
+  #story-info h2 {
+    margin: 2rem 10%;
+    font-size: 1.6rem;
+  }
+  #story-info p {
+    margin: 0 10% 2rem 10%;
+    font-size: 1.3rem;
+  }
+  #locations-info h1 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  #locations-info div {
+    margin-bottom: 1rem;
+  }
+  #locations-info div h2 {
+    font-size: 1.6rem;
+    letter-spacing: .3rem;
+  }
+  #locations-info div p {
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+  }
+  #contact-info {
+    padding: 2rem 10%;
+  }
+  #contact-info div h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  #contact-info div a {
+    font-size: 1.6rem;
+  }
+  #contact-info div a:nth-of-type(2) {
+    margin-bottom: 1.5rem;
+  }
+  #contact-info div h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--dark-pink);
+  }
+  #contact-info div p {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: var(--dark-pink);
   }
 }
 
-@media screen and (min-width: 1020px) {
-  #main-body #hero {
-    width: 95%;
+@media screen and (min-width: 992px) {
+  #carousel-main .carousel-caption {
+    -webkit-transform: translateY(-4rem);
+            transform: translateY(-4rem);
   }
-  #main-body #hero p {
-    font-size: 8.5rem;
-    -webkit-transform: translate(2rem, -11rem);
-            transform: translate(2rem, -11rem);
-    letter-spacing: .4rem;
+  #carousel-main .carousel-caption h1 {
+    font-size: 6rem;
+    -webkit-transform: translateY(-9rem);
+            transform: translateY(-9rem);
   }
-  #main-body #hero #scene div {
-    font-size: .8rem;
+  #carousel-main .carousel-caption h5 {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+    font-size: 2rem;
   }
-  #main-body #hero #scene div:nth-of-type(2) {
-    margin-top: 27%;
+  #carousel-main .carousel-caption p {
+    margin-bottom: 5rem;
+    font-size: 1.8rem;
   }
-  #main-body #hero #scene div:nth-of-type(3) {
-    margin-top: 20%;
-    margin-left: 80%;
+  #carousel-main .carousel-caption h2 {
+    margin-left: 60%;
+    -webkit-transform: translate(7rem, 3rem);
+            transform: translate(7rem, 3rem);
   }
-  #main-body #hero .claudia {
-    font-size: 8.5rem;
-    padding: .2rem 1rem 0 1.9rem;
-    margin-bottom: 10rem;
-    margin-left: 20rem;
-    letter-spacing: .4rem;
+  #carousel-main .carousel-control-prev {
+    -webkit-transform: translate(20%, 38rem);
+            transform: translate(20%, 38rem);
   }
-  #main-body #hero .more-info .fa-arrow-right {
-    font-size: 7.5rem;
-    left: 20rem;
-    bottom: 3rem;
-    display: block;
+  #carousel-main .carousel-control-next {
+    -webkit-transform: translate(-500%, 38rem);
+            transform: translate(-500%, 38rem);
   }
-  #main-body #hero .more-info p {
+  #carousel-main .carousel-indicators {
+    position: absolute;
+    -webkit-transform: translate(-50%, -1rem);
+            transform: translate(-50%, -1rem);
+  }
+  nav #menu {
+    width: 15rem;
+    height: 100vh;
+    top: 0;
+    left: -15rem;
+    z-index: 20;
+  }
+  nav #menu .menu-logo {
+    padding: 1rem;
+  }
+  nav #menu .menu-logo h1 {
+    font-size: 2rem;
+    letter-spacing: .5rem;
+  }
+  nav #menu .menu-logo h5 {
     font-size: 1.5rem;
-    margin: 1.7rem 0 0 29rem;
+    margin-top: .5rem;
+  }
+  nav #menu .menu-items {
+    padding: 1rem;
+  }
+  nav #menu .menu-items ul li {
+    margin-top: 1rem;
+  }
+  nav #menu .menu-items ul li a {
+    font-size: 1.5rem;
+    padding: .5rem;
+  }
+  nav #menu .menu-social a {
+    margin: 1.3rem;
+    font-size: 1.2rem;
+  }
+  #intro-about {
+    height: 40rem;
+    width: 100%;
+    height: 25rem;
+  }
+  #intro-about h1,
+  #intro-about h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+  #intro-about p {
+    margin: 0 10%;
+    font-size: 1.6rem;
+  }
+  #intro-creations {
+    height: 25rem;
+  }
+  #intro-creations h1,
+  #intro-creations h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+  #intro-creations p {
+    margin: 0 10%;
+    font-size: 1.6rem;
+  }
+  .intro-creations-products .creations .product {
+    height: 60rem;
+    cursor: pointer;
+  }
+  .intro-creations-products .creations .product h1 {
+    font-size: 3rem;
+    margin: 2rem 0;
     letter-spacing: .3rem;
   }
-  #main-body #hero .menu-fixed {
-    -webkit-transform: translateY(-35rem);
-            transform: translateY(-35rem);
+  .intro-creations-products .creations .product .product-img {
+    height: 80%;
+    left: 0;
+    top: 0;
   }
-  #main-body #hero .menu-fixed li {
-    font-size: 1.5rem;
+  .intro-creations-products .creations .product:hover .product-img {
+    height: 30%;
+    left: -60%;
+    height: 77%;
   }
-  #main-body #hero .info-about-me {
-    padding: 2%;
+  .intro-creations-products .creations .product .product-hover {
+    margin-top: 4rem;
   }
-  #main-body #hero .info-about-me p {
-    font-size: 1.7rem;
-    line-height: 2rem;
-    letter-spacing: .01rem;
+  .intro-creations-products .creations .product .product-hover p {
+    margin-top: 1rem;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
   }
-  #main-body #hero .info-about-me .work-together-contact {
-    font-size: 1.5rem;
+  .intro-creations-products .creations .product .product-hover p:nth-of-type(4) {
+    color: var(--dark-pink);
   }
-  #info-about-me p {
-    width: 49%;
-  }
-  #info-about-me .skills-about-me {
-    width: 26rem;
-    -webkit-transform: translateY(4rem);
-            transform: translateY(4rem);
-    border-left: 0.01rem solid var(--orange-main);
-    padding-left: 1rem;
-  }
-  #info-about-me .skills-about-me h1 {
+  #bakery-info h1 {
     font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  #bakery-info p {
+    width: 60%;
+    font-size: 1.9rem;
+    font-weight: 600;
+  }
+  #story-info h1 {
+    font-size: 1.9rem;
+    margin: 2rem 10% 0 10%;
+  }
+  #story-info h2 {
+    margin: 2.3rem 10%;
+    font-size: 1.6rem;
+  }
+  #story-info p {
+    margin: 0 10% 2rem 10%;
+    font-size: 1.5rem;
+  }
+  #locations-info h1 {
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+  }
+  #locations-info div {
+    margin-bottom: 1rem;
+  }
+  #locations-info div h2 {
+    font-size: 1.6rem;
+    letter-spacing: .3rem;
+  }
+  #locations-info div p {
+    font-size: 1.4rem;
     letter-spacing: .1rem;
   }
-  #info-about-me .skills-about-me ul li {
-    font-size: 1.4rem;
-    color: white;
+  #contact-info {
+    padding: 2rem 10%;
   }
-  #info-about-me .skills-about-me ul li span {
-    font-size: 1.1rem;
-    color: var(--orange-rgba);
+  #contact-info div h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
   }
-  @-webkit-keyframes glitch-animation-1 {
-    0% {
-      clip: rect(64px, 800px, 119px, 30px);
-    }
-    10% {
-      clip: rect(52px, 800px, 20px, 30px);
-    }
-    20% {
-      clip: rect(79px, 800px, 43px, 30px);
-    }
-    30% {
-      clip: rect(5px, 800px, 134px, 30px);
-    }
-    40% {
-      clip: rect(6px, 800px, 8px, 30px);
-    }
-    50% {
-      clip: rect(80px, 800px, 21px, 30px);
-    }
-    60% {
-      clip: rect(59px, 800px, 64px, 30px);
-    }
-    70% {
-      clip: rect(99px, 800px, 39px, 30px);
-    }
-    80% {
-      clip: rect(12px, 800px, 127px, 30px);
-    }
-    90% {
-      clip: rect(15px, 800px, 133px, 30px);
-    }
-    100% {
-      clip: rect(95px, 800px, 57px, 30px);
-    }
+  #contact-info div a {
+    font-size: 1.6rem;
   }
-  @keyframes glitch-animation-1 {
-    0% {
-      clip: rect(64px, 800px, 119px, 30px);
-    }
-    10% {
-      clip: rect(52px, 800px, 20px, 30px);
-    }
-    20% {
-      clip: rect(79px, 800px, 43px, 30px);
-    }
-    30% {
-      clip: rect(5px, 800px, 134px, 30px);
-    }
-    40% {
-      clip: rect(6px, 800px, 8px, 30px);
-    }
-    50% {
-      clip: rect(80px, 800px, 21px, 30px);
-    }
-    60% {
-      clip: rect(59px, 800px, 64px, 30px);
-    }
-    70% {
-      clip: rect(99px, 800px, 39px, 30px);
-    }
-    80% {
-      clip: rect(12px, 800px, 127px, 30px);
-    }
-    90% {
-      clip: rect(15px, 800px, 133px, 30px);
-    }
-    100% {
-      clip: rect(95px, 800px, 57px, 30px);
-    }
+  #contact-info div a:nth-of-type(2) {
+    margin-bottom: 1.5rem;
   }
-  @-webkit-keyframes glitch-animation-2 {
-    0% {
-      clip: rect(64px, 800px, 98px, 30px);
-    }
-    10% {
-      clip: rect(2px, 800px, 116px, 30px);
-    }
-    20% {
-      clip: rect(65px, 800px, 106px, 30px);
-    }
-    30% {
-      clip: rect(77px, 800px, 14px, 30px);
-    }
-    40% {
-      clip: rect(32px, 800px, 105px, 30px);
-    }
-    50% {
-      clip: rect(39px, 800px, 23px, 30px);
-    }
-    60% {
-      clip: rect(35px, 800px, 32px, 30px);
-    }
-    70% {
-      clip: rect(91px, 800px, 7px, 30px);
-    }
-    80% {
-      clip: rect(84px, 800px, 89px, 30px);
-    }
-    90% {
-      clip: rect(70px, 800px, 62px, 30px);
-    }
-    100% {
-      clip: rect(47px, 800px, 109px, 30px);
-    }
+  #contact-info div h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--dark-pink);
   }
-  @keyframes glitch-animation-2 {
-    0% {
-      clip: rect(64px, 800px, 98px, 30px);
-    }
-    10% {
-      clip: rect(2px, 800px, 116px, 30px);
-    }
-    20% {
-      clip: rect(65px, 800px, 106px, 30px);
-    }
-    30% {
-      clip: rect(77px, 800px, 14px, 30px);
-    }
-    40% {
-      clip: rect(32px, 800px, 105px, 30px);
-    }
-    50% {
-      clip: rect(39px, 800px, 23px, 30px);
-    }
-    60% {
-      clip: rect(35px, 800px, 32px, 30px);
-    }
-    70% {
-      clip: rect(91px, 800px, 7px, 30px);
-    }
-    80% {
-      clip: rect(84px, 800px, 89px, 30px);
-    }
-    90% {
-      clip: rect(70px, 800px, 62px, 30px);
-    }
-    100% {
-      clip: rect(47px, 800px, 109px, 30px);
-    }
+  #contact-info div p {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: var(--dark-pink);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  #main-body #hero {
-    width: 95%;
+  #carousel-main .carousel-caption {
+    -webkit-transform: translateY(-4rem);
+            transform: translateY(-4rem);
   }
-  #main-body #hero p {
-    font-size: 9rem;
-    -webkit-transform: translate(2rem, -10rem);
-            transform: translate(2rem, -10rem);
-    letter-spacing: .1rem;
+  #carousel-main .carousel-caption h1 {
+    font-size: 6rem;
+    -webkit-transform: translate(6rem, -9rem);
+            transform: translate(6rem, -9rem);
   }
-  #main-body #hero #scene div {
-    font-size: .8rem;
+  #carousel-main .carousel-caption h5 {
+    -webkit-transform: translate(6rem, -2rem);
+            transform: translate(6rem, -2rem);
+    font-size: 1.5rem;
   }
-  #main-body #hero #scene div:nth-of-type(1) {
-    margin-top: 5%;
+  #carousel-main .carousel-caption p {
+    margin-bottom: 5rem;
+    font-size: 1.3rem;
+    letter-spacing: .2rem;
+    width: 70%;
+    margin-left: 13%;
+    -webkit-transform: translateX(6rem);
+            transform: translateX(6rem);
   }
-  #main-body #hero #scene div:nth-of-type(2) {
-    margin-top: 22%;
-    margin-left: 40%;
+  #carousel-main .carousel-caption h2 {
+    margin-left: 80%;
+    -webkit-transform: translate(7rem, 3rem);
+            transform: translate(7rem, 3rem);
+    font-size: 1.3rem;
   }
-  #main-body #hero .claudia {
-    font-size: 9rem;
-    padding: .2rem 1rem 0 1.9rem;
-    margin-bottom: 9rem;
-    margin-left: 20rem;
-    letter-spacing: 1rem;
+  #carousel-main .carousel-control-prev {
+    -webkit-transform: translate(127%, 38rem);
+            transform: translate(127%, 38rem);
   }
-  #main-body #hero .more-info .fa-arrow-right {
-    font-size: 7rem;
-    left: 40%;
-    bottom: 2rem;
+  #carousel-main .carousel-control-next {
+    -webkit-transform: translate(-410%, 38rem);
+            transform: translate(-410%, 38rem);
   }
-  #main-body #hero .more-info p {
-    font-size: 1.8rem;
-    margin: 1.2rem 0 0 51%;
+  #carousel-main .carousel-indicators {
+    position: absolute;
+    -webkit-transform: translate(-30%, -2rem);
+            transform: translate(-30%, -2rem);
+  }
+  nav #menu {
+    position: fixed;
+    width: 17rem;
+    height: 100vh;
+    top: 0;
+    left: 0rem;
+    z-index: 20;
+  }
+  nav #menu .menu-close {
+    display: none;
+  }
+  nav #menu .menu-logo {
+    padding: 1rem;
+  }
+  nav #menu .menu-logo h1 {
+    font-size: 2.4rem;
+    letter-spacing: .49rem;
+  }
+  nav #menu .menu-logo h5 {
+    font-size: 1.9rem;
+    margin-top: .5rem;
+  }
+  nav #menu .menu-items {
+    padding: 1rem;
+  }
+  nav #menu .menu-items ul li {
+    margin-top: 1rem;
+  }
+  nav #menu .menu-items ul li a {
+    font-size: 1.7rem;
+    padding: .5rem;
+  }
+  nav #menu .menu-social a {
+    margin: 1.3rem;
+    font-size: 1.5rem;
+  }
+  #intro-about {
+    height: 40rem;
+    width: 100%;
+    height: 40rem;
+  }
+  #intro-about h1,
+  #intro-about h2 {
+    font-size: 2rem;
+    margin: 0 20% 1rem 30%;
+  }
+  #intro-about p {
+    margin: 0 20% 0 30%;
+    font-size: 2.7rem;
+  }
+  #intro-creations {
+    height: 40rem;
+  }
+  #intro-creations h1,
+  #intro-creations h2 {
+    font-size: 2rem;
+    margin: 0 20% 1rem 35%;
+  }
+  #intro-creations p {
+    font-size: 2.5rem;
+    margin: 0 20% 1rem 35%;
+  }
+  .intro-creations-products {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .intro-creations-products .creations {
+    margin-left: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .intro-creations-products .creations .product {
+    height: 50rem;
+    cursor: pointer;
+    width: 35rem;
+    margin: 0 0rem 2rem 1rem;
+  }
+  .intro-creations-products .creations .product h1 {
+    font-size: 3rem;
+    margin: 2rem 0;
     letter-spacing: .3rem;
   }
-  #main-body #hero .menu-fixed {
-    -webkit-transform: translateY(-38.5rem);
-            transform: translateY(-38.5rem);
-    margin-left: 60%;
+  .intro-creations-products .creations .product .product-img {
+    height: 80%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    opacity: 1;
   }
-  #main-body #hero .menu-fixed li {
-    font-size: 1.4rem;
+  .intro-creations-products .creations .product:hover .product-img {
+    left: -60%;
+    height: 77%;
+    opacity: 0;
   }
-  #info-about-me .about-me-title h1 {
-    font-size: 4.9rem;
-    line-height: 4.9rem;
+  .intro-creations-products .creations .product .product-hover {
+    margin-top: 4rem;
+    width: 35rem;
   }
-  #info-about-me .about-me-title h1 span {
-    font-size: 4rem;
-  }
-  #info-about-me p {
-    width: 40%;
+  .intro-creations-products .creations .product .product-hover p {
+    margin-top: 1rem;
     font-size: 1.5rem;
-    font-weight: 200;
+    margin-bottom: 1rem;
+    -webkit-transform: translateX(-3.5rem);
+            transform: translateX(-3.5rem);
   }
-  #info-about-me .skills-about-me {
-    width: 37rem;
-    -webkit-transform: translateY(4rem);
-            transform: translateY(4rem);
-    border-left: 0.01rem solid var(--orange-main);
-    padding-left: 2rem;
+  .intro-creations-products .creations .product .product-hover p:nth-of-type(4) {
+    color: var(--dark-pink);
   }
-  #info-about-me .skills-about-me h1 {
-    font-size: 2.7rem;
+  #bakery-info h1 {
+    font-size: 2rem;
+    margin: 0 20% 2rem 30%;
+  }
+  #bakery-info p {
+    width: 60%;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0 20% 1rem 35%;
+  }
+  #story-info h1 {
+    font-size: 1.9rem;
+    margin: 2rem 20% 0 30%;
+  }
+  #story-info h2 {
+    margin: 2.3rem 20% 0 30%;
+    font-size: 1.6rem;
+  }
+  #story-info p {
+    margin: 0 20% 2rem 30%;
+    font-size: 1.6rem;
+  }
+  #locations-info h1 {
+    font-size: 2.5rem;
+    margin: 0 20% 2rem 30%;
+  }
+  #locations-info div {
+    margin: 0 20% 1rem 30%;
+  }
+  #locations-info div h2 {
+    font-size: 2rem;
+    letter-spacing: .3rem;
+  }
+  #locations-info div p {
+    font-size: 1.7rem;
     letter-spacing: .1rem;
   }
-  #info-about-me .skills-about-me ul li {
-    font-size: 1.8rem;
-    color: white;
+  #contact-info {
+    padding: 2rem 10%;
   }
-  #info-about-me .skills-about-me ul li span {
-    font-size: 1.5rem;
-    color: var(--orange-rgba);
+  #contact-info div h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0 20% 1rem 30%;
   }
-  @-webkit-keyframes glitch-animation-1 {
-    0% {
-      clip: rect(7px, 800px, 87px, 30px);
-    }
-    10% {
-      clip: rect(37px, 800px, 125px, 30px);
-    }
-    20% {
-      clip: rect(9px, 800px, 130px, 30px);
-    }
-    30% {
-      clip: rect(93px, 800px, 81px, 30px);
-    }
-    40% {
-      clip: rect(30px, 800px, 119px, 30px);
-    }
-    50% {
-      clip: rect(53px, 800px, 49px, 30px);
-    }
-    60% {
-      clip: rect(42px, 800px, 28px, 30px);
-    }
-    70% {
-      clip: rect(30px, 800px, 86px, 30px);
-    }
-    80% {
-      clip: rect(12px, 800px, 52px, 30px);
-    }
-    90% {
-      clip: rect(87px, 800px, 61px, 30px);
-    }
-    100% {
-      clip: rect(17px, 800px, 91px, 30px);
-    }
+  #contact-info div a {
+    font-size: 1.6rem;
+    margin: 0 20% 1rem 30%;
   }
-  @keyframes glitch-animation-1 {
-    0% {
-      clip: rect(7px, 800px, 87px, 30px);
-    }
-    10% {
-      clip: rect(37px, 800px, 125px, 30px);
-    }
-    20% {
-      clip: rect(9px, 800px, 130px, 30px);
-    }
-    30% {
-      clip: rect(93px, 800px, 81px, 30px);
-    }
-    40% {
-      clip: rect(30px, 800px, 119px, 30px);
-    }
-    50% {
-      clip: rect(53px, 800px, 49px, 30px);
-    }
-    60% {
-      clip: rect(42px, 800px, 28px, 30px);
-    }
-    70% {
-      clip: rect(30px, 800px, 86px, 30px);
-    }
-    80% {
-      clip: rect(12px, 800px, 52px, 30px);
-    }
-    90% {
-      clip: rect(87px, 800px, 61px, 30px);
-    }
-    100% {
-      clip: rect(17px, 800px, 91px, 30px);
-    }
+  #contact-info div a:nth-of-type(2) {
+    margin-bottom: 1.5rem;
   }
-  @-webkit-keyframes glitch-animation-2 {
-    0% {
-      clip: rect(74px, 800px, 116px, 30px);
-    }
-    10% {
-      clip: rect(60px, 800px, 118px, 30px);
-    }
-    20% {
-      clip: rect(98px, 800px, 39px, 30px);
-    }
-    30% {
-      clip: rect(62px, 800px, 11px, 30px);
-    }
-    40% {
-      clip: rect(9px, 800px, 63px, 30px);
-    }
-    50% {
-      clip: rect(86px, 800px, 32px, 30px);
-    }
-    60% {
-      clip: rect(99px, 800px, 32px, 30px);
-    }
-    70% {
-      clip: rect(6px, 800px, 121px, 30px);
-    }
-    80% {
-      clip: rect(18px, 800px, 114px, 30px);
-    }
-    90% {
-      clip: rect(34px, 800px, 83px, 30px);
-    }
-    100% {
-      clip: rect(84px, 800px, 92px, 30px);
-    }
+  #contact-info div h2 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--dark-pink);
+    margin: 0 20% 1rem 30%;
   }
-  @keyframes glitch-animation-2 {
-    0% {
-      clip: rect(74px, 800px, 116px, 30px);
-    }
-    10% {
-      clip: rect(60px, 800px, 118px, 30px);
-    }
-    20% {
-      clip: rect(98px, 800px, 39px, 30px);
-    }
-    30% {
-      clip: rect(62px, 800px, 11px, 30px);
-    }
-    40% {
-      clip: rect(9px, 800px, 63px, 30px);
-    }
-    50% {
-      clip: rect(86px, 800px, 32px, 30px);
-    }
-    60% {
-      clip: rect(99px, 800px, 32px, 30px);
-    }
-    70% {
-      clip: rect(6px, 800px, 121px, 30px);
-    }
-    80% {
-      clip: rect(18px, 800px, 114px, 30px);
-    }
-    90% {
-      clip: rect(34px, 800px, 83px, 30px);
-    }
-    100% {
-      clip: rect(84px, 800px, 92px, 30px);
-    }
+  #contact-info div p {
+    font-size: 1.78rem;
+    font-weight: lighter;
+    color: var(--dark-pink);
+    margin: 0 20% 1rem 30%;
   }
 }
 /*# sourceMappingURL=main.css.map */
